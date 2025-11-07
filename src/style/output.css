@@ -165,6 +165,24 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .-top-5 {
+    top: calc(var(--spacing) * -5);
+  }
+  .top-\[-20px\] {
+    top: -20px;
+  }
+  .top-\[-30px\] {
+    top: -30px;
+  }
+  .top-\[-\] {
+    top: -;
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -176,6 +194,18 @@
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
+  .mt-18 {
+    margin-top: calc(var(--spacing) * 18);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-\[10\] {
+    margin-top: 10;
   }
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
@@ -195,6 +225,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .inline {
     display: inline;
   }
@@ -206,6 +239,9 @@
   }
   .h-\[35px\] {
     height: 35px;
+  }
+  .h-\[72px\] {
+    height: 72px;
   }
   .h-\[300px\] {
     height: 300px;
@@ -231,6 +267,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
@@ -242,6 +281,15 @@
   }
   .w-\[20px\] {
     width: 20px;
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
+  .w-\[50px\] {
+    width: 50px;
+  }
+  .w-\[72px\] {
+    width: 72px;
   }
   .w-\[100px\] {
     width: 100px;
@@ -281,6 +329,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
   }
   .justify-between {
     justify-content: space-between;
@@ -331,6 +382,9 @@
   .bg-\[\#556ee640\] {
     background-color: #556ee640;
   }
+  .bg-\[\#EFF2F7\] {
+    background-color: #EFF2F7;
+  }
   .bg-\[\#F8F8FB\] {
     background-color: #F8F8FB;
   }
@@ -361,8 +415,14 @@
   .px-2\.5 {
     padding-inline: calc(var(--spacing) * 2.5);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
+  }
+  .pb-7 {
+    padding-bottom: calc(var(--spacing) * 7);
   }
   .text-center {
     text-align: center;
@@ -444,6 +504,11 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
+  }
+  .placeholder\:capitalize {
+    &::placeholder {
+      text-transform: capitalize;
+    }
   }
   .hover\:bg-\[\#485EC4\] {
     &:hover {
