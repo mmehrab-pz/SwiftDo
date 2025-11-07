@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hi dear</title>
+    <title>SwiftDo</title>
     <link rel="stylesheet" href="src/style/output.css">
 </head>
-<body class="w-full h-dvh bg-[#222736]">
-    <section></section>
-</body>
-</html>
 
+<body class="w-full h-dvh bg-[#F8F8FB] flex flex-col justify-center items-center select-none">
+    <!-- -------------------------login------------------- -->
+    <section id="login" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08]">
+        <div class="w-full flex justify-between bg-[#556ee640]">
+            <div class="p-6 ">
+                <h3 class="text-[#556ee6] font-['500'] text-[16px] capitalize">welcome back !</h3>
+                <h4 class="text-[#556ee6] font-['400'] text-[13px] mt-2.5">Sign in to continue to swiftDo.</h4>
+            </div>
+            <figure class="">
+                <img src="src/asset/img/girl.png" alt="" class="w-[180px]">
+            </figure>
+        </div>
+        <div class="w-full bg-[white] p-5 ">
+            <form action="" class="w-full h-full">
+                <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
+                <input type="email" id="email" placeholder="example@gmail.com"
+                    class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
+                <label for="password"
+                    class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
+                <input type="password" id="password"
+                    class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
+                <div class="flex items-center mt-5">
+                    <input type="checkbox">
+                    <p class="inline text-[#495057] text-[13px] font-['500'] capitalize ml-2.5">Remember me</p>
+                </div>
+                <button class="w-full h-[35px] rounded-sm flex justify-center items-center bg-[#556ee6] hover:bg-[#485EC4] duration-200 text-white text-[13px] font-['400'] capitalize mt-5 cursor-pointer">log in</button>
+            </form>
+            <h3 class="text-center w-full mt-5 text-[#495057] text-[14px] font-['500'] capitalize">sign in with</h3>
+            <div class="w-full mt-2.5 flex justify-center">
+                <figure class="w-8 h-8 rounded-full flex justify-center items-center bg-[#F46A6A] mr-1.5 cursor-pointer">
+                    <img src="src/asset/img/icon/google.png" alt="" class="w-4">
+                </figure>
+                <figure class="w-8 h-8 rounded-full flex justify-center items-center bg-[#556EE6] cursor-pointer">
+                    <img src="src/asset/img/icon/facebook.png" alt="" class="w-4">
+                </figure>
+            </div>
+            <a href="#" class="w-full flex justify-center items-center text-[#74788d] text-[13px] font-['400'] capitalize mt-5">
+                <img src="src/asset/img/icon/lock.png" alt="" class="w-[13px] mr-1">
+                forgot your password?
+            </a>
+        </div>
+    </section>
+    <!-- -------------------------signup------------------- -->
+    <section id="signup">
+
+    </section>
+    <!-- -------------------------------------------- -->
+    <p class="mt-10 text-[#495057] text-[13px] font-['400']">
+        Don't have an account ? <span class="text-[#556ee6] cursor-pointer">Signup now</span>
+    </p>
+    <p class="mt-5 text-[#495057] text-[13px] font-['400']">© 2025 SwiftDo. Crafted with ❤️ by Mehrab Pourzakaria</p>
+</body>
+
+</html>

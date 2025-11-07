@@ -1,6 +1,35 @@
 @import "tailwindcss";
 /* npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch */
 
-@layer base{}
+@layer base{
+    @font-face {
+        font-family: '300';
+        src: url(../asset/font/Poppins-Light.ttf);
+    }
+    @font-face {
+        font-family: '400';
+        src: url(../asset/font/Poppins-Regular.ttf);
+    }
+    @font-face {
+        font-family: '500';
+        src: url(../asset/font/Poppins-Medium.ttf);
+    }
+    @font-face {
+        font-family: '600';
+        src: url(../asset/font/Poppins-SemiBold.ttf);
+    }
+    @font-face {
+        font-family: '700';
+        src: url(../asset/font/Poppins-Bold.ttf);
+    }
+    @font-face {
+        font-family: '800';
+        src: url(../asset/font/Poppins-ExtraBold.ttf);
+    }
+}
 @layer components{}
-@layer utilities{}
+@layer utilities{
+    .bt{
+        @apply border border-black
+    }
+}
