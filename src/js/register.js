@@ -31,6 +31,31 @@ LoginNow.addEventListener("click", () => {
     input.classList.remove("input-ok");
   });
 });
+// -------------show password------------------
+const eyeBtn = document.querySelectorAll(".show-password");
+
+eyeBtn.forEach((item) => {
+  item.addEventListener("mousedown", () => {
+    item.firstElementChild.classList.add("hidden");
+    item.lastElementChild.classList.remove("hidden");
+    // item.previousElementSibling.setAttribute("type", "text");
+    item.parentElement.firstElementChild.setAttribute("type", "text")
+  });
+  item.addEventListener("mouseup", () => {
+    item.lastElementChild.classList.add("hidden");
+    item.firstElementChild.classList.remove("hidden");
+    item.parentElement.firstElementChild.setAttribute("type", "password");
+  });
+});
+// -----------------------------------------error func
+function addRegexError(p, input) {
+  input.nextElementSibling.innerText = p;
+  input.nextElementSibling.classList.remove("hidden");
+}
+function removeRegexError(input) {
+  input.nextElementSibling.innerText = "";
+  input.nextElementSibling.classList.add("hidden");
+}
 // -----------------------------------------signup
 let email = "";
 let username = "";
@@ -48,9 +73,11 @@ signupForm.querySelectorAll("input").forEach((input) => {
         ) {
           input.classList.remove("input-ok");
           input.classList.add("input-alert");
+          addRegexError("Oops! That doesn’t look like a valid email.", input);
         } else {
           input.classList.remove("input-alert");
           input.classList.add("input-ok");
+          removeRegexError(input);
           email = input.value;
           console.log(email);
         }
@@ -59,13 +86,15 @@ signupForm.querySelectorAll("input").forEach((input) => {
         if (
           input.value === "" ||
           input.value == null ||
-          input.value.search(/^[a-z0-9_-]{3,15}$/) === -1
+          input.value.search(/^(?![0-9_-]+$)[a-z0-9_-]{3,15}$/) === -1
         ) {
           input.classList.remove("input-ok");
           input.classList.add("input-alert");
+          addRegexError("Oops! That username doesn’t look right.", input);
         } else {
           input.classList.remove("input-alert");
           input.classList.add("input-ok");
+          removeRegexError(input);
           username = input.value;
           console.log(username);
         }
@@ -80,9 +109,11 @@ signupForm.querySelectorAll("input").forEach((input) => {
         ) {
           input.classList.remove("input-ok");
           input.classList.add("input-alert");
+          addRegexError("Hmm... that password looks too weak.", input);
         } else {
           input.classList.remove("input-alert");
           input.classList.add("input-ok");
+          removeRegexError(input);
           password = input.value;
           console.log(password);
         }
@@ -191,8 +222,8 @@ loginForm.querySelectorAll("input").forEach((input) => {
   input.addEventListener("change", () => {
     let role = input.dataset.role;
     switch (role) {
-      case "email":
-        email = input.value;
+      case "username":
+        username = input.value;
         break;
       case "password":
         password = input.value;
@@ -214,7 +245,7 @@ function removeLoginLoader() {
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (!email || !password) {
+  if (!username || !password) {
     errorAlert("Please make sure all fields are filled out before continuing.");
     loginForm.querySelectorAll("input").forEach((input) => {
       if (!input.value) {
@@ -228,7 +259,7 @@ loginForm.addEventListener("submit", (e) => {
 });
 
 async function checkUser() {
-  console.log(email);
+  console.log(username);
   console.log(password);
 
   try {
@@ -238,7 +269,7 @@ async function checkUser() {
     };
 
     const url = new URL(`https://${key[myTok]}.mockapi.io/users`);
-    url.searchParams.append("email", email);
+    url.searchParams.append("username", username);
     url.searchParams.append("password", password);
 
     const response = await fetch(url, {
