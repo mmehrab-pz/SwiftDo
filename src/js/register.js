@@ -39,7 +39,7 @@ eyeBtn.forEach((item) => {
     item.firstElementChild.classList.add("hidden");
     item.lastElementChild.classList.remove("hidden");
     // item.previousElementSibling.setAttribute("type", "text");
-    item.parentElement.firstElementChild.setAttribute("type", "text")
+    item.parentElement.firstElementChild.setAttribute("type", "text");
   });
   item.addEventListener("mouseup", () => {
     item.lastElementChild.classList.add("hidden");
@@ -61,7 +61,7 @@ let email = "";
 let username = "";
 let password = "";
 
-signupForm.querySelectorAll("input").forEach((input) => {
+signupForm.querySelectorAll("input").forEach((input, i, arr) => {
   input.addEventListener("change", () => {
     let role = input.dataset.role;
     switch (role) {
@@ -80,6 +80,7 @@ signupForm.querySelectorAll("input").forEach((input) => {
           removeRegexError(input);
           email = input.value;
           console.log(email);
+          checkEmail();
         }
         break;
       case "username":
@@ -97,6 +98,7 @@ signupForm.querySelectorAll("input").forEach((input) => {
           removeRegexError(input);
           username = input.value;
           console.log(username);
+          checkUsername()
         }
         break;
       case "password":
@@ -136,10 +138,89 @@ signupForm.addEventListener("submit", (e) => {
     });
   } else {
     addRegisterLoader();
-    addUser();
+    addUser()
   }
 });
+// -----------check email---------------
 
+async function checkEmail() {
+  try {
+    const myTok = Symbol("");
+    const key = {
+      [myTok]: "690df677bd0fefc30a02fc79",
+    };
+
+    const url = new URL(`https://${key[myTok]}.mockapi.io/users`);
+    url.searchParams.append("email", email);
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+
+    const user = await response.json();
+
+    console.log(user);
+
+    errorAlert("This email is already registered.");
+    email = "";
+    signupForm.querySelectorAll("input").forEach((input, i, arr) => {
+      arr[0].classList.remove("input-ok");
+      arr[0].classList.add("input-alert");
+      addRegexError("This email is already registered.", arr[0]);
+    });
+  } catch (error) {
+    console.error(error);
+    signupForm.querySelectorAll("input").forEach((input, i, arr) => {
+      removeRegexError(arr[0]);
+    });
+  }
+}
+// -----------check username---------------
+
+async function checkUsername() {
+  try {
+    const myTok = Symbol("");
+    const key = {
+      [myTok]: "690df677bd0fefc30a02fc79",
+    };
+
+    const url = new URL(`https://${key[myTok]}.mockapi.io/users`);
+    url.searchParams.append("username", username);
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+
+    const user = await response.json();
+
+    console.log(user);
+
+    errorAlert("This username is already registered.");
+    username = "";
+    signupForm.querySelectorAll("input").forEach((input, i, arr) => {
+      arr[1].classList.remove("input-ok");
+      arr[1].classList.add("input-alert");
+      addRegexError("This username is already registered.", arr[1]);
+    });
+  } catch (error) {
+    console.error(error);
+    signupForm.querySelectorAll("input").forEach((input, i, arr) => {
+      removeRegexError(arr[1]);
+    });
+  }
+}
+
+// -------------------adduser----------
 async function addUser() {
   try {
     const myTok = Symbol("");
@@ -254,11 +335,11 @@ loginForm.addEventListener("submit", (e) => {
     });
   } else {
     addLoginLoader();
-    checkUser();
+    getUser();
   }
 });
 
-async function checkUser() {
+async function getUser() {
   console.log(username);
   console.log(password);
 
@@ -270,7 +351,7 @@ async function checkUser() {
 
     const url = new URL(`https://${key[myTok]}.mockapi.io/users`);
     url.searchParams.append("username", username);
-    url.searchParams.append("password", password);
+
 
     const response = await fetch(url, {
       method: "GET",
@@ -283,7 +364,7 @@ async function checkUser() {
 
     const user = await response.json();
 
-    if (user[0].lenght === 0) {
+    if (user[0].length === 0 || user[0].password !== password) {
       errorAlert("Incorrect email or password. Please try again");
       removeLoginLoader();
       return;

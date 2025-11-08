@@ -26,7 +26,7 @@
         <p class="text-[#495057] text-[13px] font-['400']"></p>
     </span>
     <!-- -------------------------login------------------- -->
-    <section id="loginBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08]">
+    <section id="loginBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08] hidden">
         <div class="w-full flex justify-between bg-[#556ee640]">
             <div class="p-6 ">
                 <h3 class="text-[#556ee6] font-['500'] text-[16px] capitalize">welcome back !</h3>
@@ -83,7 +83,7 @@
         </div>
     </section>
     <!-- -------------------------signup------------------- -->
-    <section id="signupBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08] hidden">
+    <section id="signupBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08]">
         <div class="w-full flex justify-between bg-[#556ee640]">
             <div class="p-6 pb-7">
                 <h3 class="text-[#556ee6] font-['500'] text-[16px] capitalize">Free Register</h3>
@@ -101,14 +101,14 @@
             <form id="signup" action="" class="w-full h-full mt-16">
                 <!-- -------email -->
                 <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
-                <input data-role="email" type="email" name="email" autocomplete="off" required id="email"
+                <input data-role="email" type="email" name="email" autocomplete="off"  id="email"
                     placeholder="enter email"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
                     <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
                 <!-- -------username -->
                 <label for="username"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">username</label>
-                <input data-role="username" type="text" name="username" autocomplete="off" required
+                <input data-role="username" type="text" name="username" autocomplete="off" 
                     placeholder="enter username" id="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
                     <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
@@ -116,7 +116,7 @@
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full mt-2.5 rounded-sm relative overflow-hidden">
-                     <input data-role="password" type="password" name="password" required placeholder="enter password"
+                     <input data-role="password" type="password" name="password"  placeholder="enter password"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] outline-0 placeholder:capitalize">
                     <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
                     <span class="show-password flex justify-center items-center h-[35px] bg-[white] px-2 border border-[#ced4da] border-l-0 rounded-r-sm absolute top-0 right-0 cursor-pointer">
