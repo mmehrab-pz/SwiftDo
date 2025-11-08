@@ -378,7 +378,7 @@ async function getUser() {
       input.classList.remove("input-ok");
     });
     removeLoginLoader();
-    // window.location = "todo.html";
+    window.location = "todo.html";
   } catch (error) {
     errorAlert(`Incorrect username or password. Please try again`);
     console.error(error);
