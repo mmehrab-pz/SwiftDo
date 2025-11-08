@@ -37,17 +37,17 @@
             </figure>
         </div>
         <div class="w-full bg-[white] p-5 ">
-            <form id="login" autocomplete="on" action="" class="w-full h-full">
+            <form id="login" autocomplete="off" action="" class="w-full h-full">
                 <!-- -------username -->
                 <label for="username" class="block text-[#495057] text-[13px] font-['500'] capitalize">username</label>
-                <input data-role="username" type="username" name="username" autocomplete="username" required
+                <input data-role="username" type="username" name="username" autocomplete="off" required
                     placeholder="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
                 <!-- -------password -->
                 <label for="password" 
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full h-[35px] mt-2.5 rounded-sm relative border border-[#ced4da] overflow-hidden">
-                     <input data-role="password" type="password" name="password" autocomplete="new-password" required
+                     <input data-role="password" type="password" name="password" autocomplete="off" required
                     class="w-full h-full text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm  outline-0">
                     <span class="show-password flex justify-center items-center h-full bg-[white] px-2 absolute top-0 right-0 cursor-pointer">
                         <img src="src/asset/img/icon/closedEye.png" alt="" class="w-4">
@@ -98,7 +98,7 @@
                 class="w-[72px] h-[72px] rounded-full flex justify-center items-center absolute bg-[#EFF2F7] -top-5">
                 <img src="src/asset/img/svg/1.svg" alt="" class="w-10">
             </figure>
-            <form id="signup" action="" class="w-full h-full mt-16">
+            <form id="signup" autocomplete="off" action="" class="w-full h-full mt-16">
                 <!-- -------email -->
                 <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
                 <input data-role="email" type="email" name="email" autocomplete="off"  id="email"
@@ -116,7 +116,7 @@
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full mt-2.5 rounded-sm relative overflow-hidden">
-                     <input data-role="password" type="password" name="password"  placeholder="enter password"
+                     <input data-role="password" type="password" name="password" autocomplete="off"  placeholder="enter password"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] outline-0 placeholder:capitalize">
                     <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
                     <span class="show-password flex justify-center items-center h-[35px] bg-[white] px-2 border border-[#ced4da] border-l-0 rounded-r-sm absolute top-0 right-0 cursor-pointer">
