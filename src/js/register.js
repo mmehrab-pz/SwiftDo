@@ -365,7 +365,7 @@ async function getUser() {
     const user = await response.json();
 
     if (user[0].length === 0 || user[0].password !== password) {
-      errorAlert("Incorrect email or password. Please try again");
+      errorAlert("Incorrect username or password. Please try again");
       removeLoginLoader();
       return;
     }
@@ -380,7 +380,7 @@ async function getUser() {
     removeLoginLoader();
     // window.location = "todo.html";
   } catch (error) {
-    errorAlert(`Incorrect email or password. Please try again`);
+    errorAlert(`Incorrect username or password. Please try again`);
     console.error(error);
     removeLoginLoader();
   }
