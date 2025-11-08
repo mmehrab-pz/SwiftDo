@@ -40,28 +40,28 @@
             <form id="login" autocomplete="off" class="w-full h-full">
                 <!-- -------username -->
                 <label for="username" class="block text-[#495057] text-[13px] font-['500'] capitalize">username</label>
-                <input data-role="username" type="username"  autocomplete="off" required
-                    placeholder="username"
+                <input data-role="username" type="username" autocomplete="off" placeholder="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
                 <!-- -------password -->
-                <label for="password" 
+                <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full h-[35px] mt-2.5 rounded-sm relative border border-[#ced4da] overflow-hidden">
-                     <input data-role="password" type="password"  autocomplete="off" required
-                    class="w-full h-full text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm  outline-0">
-                    <span class="show-password flex justify-center items-center h-full bg-[white] px-2 absolute top-0 right-0 cursor-pointer">
+                    <input data-role="password" type="password" autocomplete="off"
+                        class="w-full h-full text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm  outline-0">
+                    <span
+                        class="show-password flex justify-center items-center h-full bg-[white] px-2 absolute top-0 right-0 cursor-pointer">
                         <img src="src/asset/img/icon/closedEye.png" alt="" class="w-4">
                         <img src="src/asset/img/icon/openEye.png" alt="" class="w-4 hidden">
                     </span>
                 </div>
                 <!-- -------------- -->
-                <div class="flex items-center mt-5" >
+                <div class="flex items-center mt-5">
                     <input type="checkbox">
                     <p class="inline text-[#495057] text-[13px] font-['500'] capitalize ml-2.5">Remember me</p>
                 </div>
                 <button id="loginBtn" type="submit"
                     class="w-full h-[35px] rounded-sm flex justify-center items-center bg-[#556ee6] hover:bg-[#485EC4] duration-200 text-white text-[13px] font-['400'] capitalize mt-5 cursor-pointer">
-                    <p >login</p>
+                    <p>login</p>
                     <div class=""></div>
                 </button>
             </form>
@@ -99,27 +99,30 @@
                 <img src="src/asset/img/svg/1.svg" alt="" class="w-10">
             </figure>
             <form id="signup" autocomplete="off" class="w-full h-full mt-16">
+                <!-- hidden fake fields -->
+                <input type="text" name="fakeusernameremembered" style="display:none">
+                <input type="password" name="fakepasswordremembered" style="display:none">
                 <!-- -------email -->
                 <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
-                <input data-role="email" type="email" autocomplete="off"  id="email"
-                    placeholder="enter email"
+                <input data-role="email" type="email" autocomplete="new-email" id="email" placeholder="enter email"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
-                    <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
+                <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
                 <!-- -------username -->
                 <label for="username"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">username</label>
-                <input data-role="username" type="text" autocomplete="off" 
-                    placeholder="enter username" id="username"
+                <input data-role="username" type="text" autocomplete="new-username" placeholder="enter username"
+                    id="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
-                    <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
+                <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
                 <!-- -------password -->
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full mt-2.5 rounded-sm relative overflow-hidden">
-                     <input data-role="password" type="password"  autocomplete="off"  placeholder="enter password"
-                    class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] outline-0 placeholder:capitalize">
+                    <input data-role="password" type="password" autocomplete="new-password" placeholder="enter password"
+                        class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] outline-0 placeholder:capitalize">
                     <p class="text-[12px] font-['400'] mt-1.5 text-red-600 hidden"></p>
-                    <span class="show-password flex justify-center items-center h-[35px] bg-[white] px-2 border border-[#ced4da] border-l-0 rounded-r-sm absolute top-0 right-0 cursor-pointer">
+                    <span
+                        class="show-password flex justify-center items-center h-[35px] bg-[white] px-2 border border-[#ced4da] border-l-0 rounded-r-sm absolute top-0 right-0 cursor-pointer">
                         <img src="src/asset/img/icon/closedEye.png" alt="" class="w-4">
                         <img src="src/asset/img/icon/openEye.png" alt="" class="w-4 hidden">
                     </span>
@@ -145,4 +148,5 @@
     <p class="mt-5 text-[#495057] text-[13px] font-['400']">© 2025 SwiftDo. Crafted with ❤️ by Mehrab Pourzakaria</p>
 </body>
 <script src="src/js/register.js"></script>
+
 </html>
