@@ -1,8 +1,8 @@
-# همه فایل‌های JS رو به عنوان JavaScript شناسایی کن
+# همه فایل‌های JS رو JavaScript شناسایی کن
 *.js linguist-language=JavaScript
 
-# فایل‌های HTML رو هم به JavaScript نسبت بده، ولی درصدش کمتر تاثیر بذاره
+# همه فایل‌های HTML هم به JS تبدیل کن (برای اینکه حجم HTML زیاد باعث نشه)
 *.html linguist-language=JavaScript
 
-# فایل‌های CSS رو هم می‌تونی به JavaScript نسبت بدی، یا اجازه بدی Linguist خودش تشخیص بده
-*.css linguist-language=CSS
+# فایل‌های CSS رو هم می‌تونی به JS تبدیل کنی، ولی اگه بخوای جدا بمونه، خط زیر رو اضافه نکن
+*.css linguist-language=JavaScript
