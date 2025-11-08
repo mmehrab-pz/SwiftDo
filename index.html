@@ -38,15 +38,18 @@
         </div>
         <div class="w-full bg-[white] p-5 ">
             <form id="login" autocomplete="off" class="w-full h-full">
+                <!-- hidden fake fields -->
+                <input type="text" name="fakeusernameremembered" style="display:none">
+                <input type="password" name="fakepasswordremembered" style="display:none">
                 <!-- -------username -->
                 <label for="username" class="block text-[#495057] text-[13px] font-['500'] capitalize">username</label>
-                <input data-role="username" type="username" autocomplete="off" placeholder="username"
+                <input data-role="username" type="username" autocomplete="new-username" placeholder="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
                 <!-- -------password -->
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
                 <div class="w-full h-[35px] mt-2.5 rounded-sm relative border border-[#ced4da] overflow-hidden">
-                    <input data-role="password" type="password" autocomplete="off"
+                    <input data-role="password" type="password" autocomplete="new-password"
                         class="w-full h-full text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm  outline-0">
                     <span
                         class="show-password flex justify-center items-center h-full bg-[white] px-2 absolute top-0 right-0 cursor-pointer">
