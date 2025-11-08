@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="src/style/output.css">
 </head>
 
-<body class="w-full h-dvh bg-[#F8F8FB] flex flex-col justify-center items-center select-none">
+<body class="w-full h-dvh bg-[#F8F8FB] flex flex-col justify-center items-center select-none relative overflow-hidden">
+    <!-- ---------------alert------------ -->
+    <span id="accountCreated"
+        class="absolute rounded-md px-2.5 h-[100px] flex items-center z-100 top-10 -right-120 bg-[linear-gradient(90deg,rgba(0,255,0,0.25)0%,rgba(252,252,252,1)35%)] duration-300">
+        <figure class="">
+            <img src="src/asset/img/icon/done.png" alt="" class="w-8 mr-2.5">
+        </figure>
+        <p class="text-[#495057] text-[13px] font-['400']">Your account was successfully created.</p>
+    </span>
+    <span id="errorAlert"
+        class="absolute rounded-md px-2.5 h-[100px] flex items-center z-100 top-10 -right-120 bg-[linear-gradient(90deg,rgba(255,0,0,0.25)0%,rgba(252,252,252,1)35%)] duration-300">
+        <figure class="">
+            <img src="src/asset/img/icon/error.png" alt="" class="w-8 mr-2.5">
+        </figure>
+        <p class="text-[#495057] text-[13px] font-['400']"></p>
+    </span>
     <!-- -------------------------login------------------- -->
-    <section id="login" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08]">
+    <section id="loginBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08]">
         <div class="w-full flex justify-between bg-[#556ee640]">
             <div class="p-6 ">
                 <h3 class="text-[#556ee6] font-['500'] text-[16px] capitalize">welcome back !</h3>
@@ -21,21 +36,26 @@
             </figure>
         </div>
         <div class="w-full bg-[white] p-5 ">
-            <form action="" class="w-full h-full">
+            <form id="login" autocomplete="on" action="" class="w-full h-full">
+                <!-- -------email -->
                 <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
-                <input type="email" id="email" placeholder="example@gmail.com"
+                <input data-role="email" type="email" name="email" autocomplete="email" required
+                    placeholder="example@gmail.com"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
+                <!-- -------password -->
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
-                <input type="password" id="password"
+                <input data-role="password" type="password" name="password" autocomplete="new-password" required
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0">
                 <div class="flex items-center mt-5">
                     <input type="checkbox">
                     <p class="inline text-[#495057] text-[13px] font-['500'] capitalize ml-2.5">Remember me</p>
                 </div>
-                <button
-                    class="w-full h-[35px] rounded-sm flex justify-center items-center bg-[#556ee6] hover:bg-[#485EC4] duration-200 text-white text-[13px] font-['400'] capitalize mt-5 cursor-pointer">log
-                    in</button>
+                <button id="loginBtn" type="submit"
+                    class="w-full h-[35px] rounded-sm flex justify-center items-center bg-[#556ee6] hover:bg-[#485EC4] duration-200 text-white text-[13px] font-['400'] capitalize mt-5 cursor-pointer">
+                    <p >login</p>
+                    <div class=""></div>
+                </button>
             </form>
             <h3 class="text-center w-full mt-5 text-[#495057] text-[14px] font-['500'] capitalize">sign in with</h3>
             <div class="w-full mt-2.5 flex justify-center">
@@ -55,7 +75,7 @@
         </div>
     </section>
     <!-- -------------------------signup------------------- -->
-    <section id="signup" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08] hidden">
+    <section id="signupBox" class="w-[450px]  rounded-[10px] overflow-hidden shadow-[0_.75rem_1.5rem_#12263f08] hidden">
         <div class="w-full flex justify-between bg-[#556ee640]">
             <div class="p-6 pb-7">
                 <h3 class="text-[#556ee6] font-['500'] text-[16px] capitalize">Free Register</h3>
@@ -66,25 +86,33 @@
             </figure>
         </div>
         <div class="w-full bg-[white] p-6 relative">
-            <figure class="w-[72px] h-[72px] rounded-full flex justify-center items-center absolute bg-[#EFF2F7] -top-5">
+            <figure
+                class="w-[72px] h-[72px] rounded-full flex justify-center items-center absolute bg-[#EFF2F7] -top-5">
                 <img src="src/asset/img/svg/1.svg" alt="" class="w-10">
             </figure>
-            <form action="" class="w-full h-full mt-16">
+            <form id="signup" autocomplete="on" action="" class="w-full h-full mt-16">
+                <!-- -------email -->
                 <label for="email" class="block text-[#495057] text-[13px] font-['500'] capitalize">email</label>
-                <input type="email"  placeholder="enter email"
+                <input data-role="email" type="email" name="email" autocomplete="email" required id="email"
+                    placeholder="enter email"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
+                <!-- -------username -->
                 <label for="username"
-                    class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
-                <input type="text" placeholder="enter username"
+                    class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">username</label>
+                <input data-role="username" type="text" name="username" autocomplete="username" required
+                    placeholder="enter username" id="username"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
+                <!-- -------password -->
                 <label for="password"
                     class="block text-[#495057] text-[13px] font-['500'] capitalize mt-5">password</label>
-                <input type="password" placeholder="enter password"
+                <input data-role="password" type="password" name="password" autocomplete="new-password" required
+                    id="passwordSignup" placeholder="enter password"
                     class="w-full h-[35px] text-[#343a40] text-[13px] font-['400'] px-2.5 rounded-sm border border-[#ced4da] mt-2.5 outline-0 placeholder:capitalize">
 
-                <button
+                <button id="registerBtn" type="submit"
                     class="px-3 h-[35px] rounded-sm flex justify-center items-center bg-[#556ee6] hover:bg-[#485EC4] duration-200 text-white text-[13px] font-['400'] capitalize mt-5 cursor-pointer">
-                    register
+                    <p>register</p>
+                    <div class=""></div>
                 </button>
             </form>
             <p class="mt-10 text-[#495057] text-[13px] font-['400'] text-center">
@@ -102,4 +130,5 @@
     <p class="mt-5 text-[#495057] text-[13px] font-['400']">© 2025 SwiftDo. Crafted with ❤️ by Mehrab Pourzakaria</p>
 </body>
 <script src="src/js/register.js"></script>
+
 </html>
