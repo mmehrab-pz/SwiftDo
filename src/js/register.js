@@ -10,12 +10,26 @@ SignupNow.addEventListener("click", () => {
   signupBox.classList.remove("hidden");
   SignupNow.parentElement.classList.add("hidden");
   LoginNow.parentElement.classList.remove("hidden");
+  email = "";
+  password = "";
+  username = "";
+  loginForm.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+    input.classList.remove("input-ok");
+  });
 });
 LoginNow.addEventListener("click", () => {
   signupBox.classList.add("hidden");
   loginBox.classList.remove("hidden");
   LoginNow.parentElement.classList.add("hidden");
   SignupNow.parentElement.classList.remove("hidden");
+  email = "";
+  password = "";
+  username = "";
+  signupForm.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+    input.classList.remove("input-ok");
+  });
 });
 // -----------------------------------------signup
 let email = "";
@@ -169,7 +183,7 @@ function removeRegisterLoader() {
   registerBtn.firstElementChild.classList.remove("hidden");
   registerBtn.removeAttribute("disabled", "");
 }
-// -----------------------------------------login
+// -------------------------------------------------login
 const loginForm = document.getElementById("login");
 const loginBtn = document.getElementById("loginBtn");
 
@@ -207,8 +221,55 @@ loginForm.addEventListener("submit", (e) => {
         input.classList.add("input-alert");
       }
     });
-  }else{
-    addLoginLoader()
+  } else {
+    addLoginLoader();
+    checkUser();
   }
 });
 
+async function checkUser() {
+  console.log(email);
+  console.log(password);
+
+  try {
+    const myTok = Symbol("");
+    const key = {
+      [myTok]: "690df677bd0fefc30a02fc79",
+    };
+
+    const url = new URL(`https://${key[myTok]}.mockapi.io/users`);
+    url.searchParams.append("email", email);
+    url.searchParams.append("password", password);
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+
+    const user = await response.json();
+
+    if (user[0].lenght === 0) {
+      errorAlert("Incorrect email or password. Please try again");
+      removeLoginLoader();
+      return;
+    }
+
+    email = "";
+    password = "";
+    username = "";
+    loginForm.querySelectorAll("input").forEach((input) => {
+      input.value = "";
+      input.classList.remove("input-ok");
+    });
+    removeLoginLoader();
+    // window.location = "todo.html";
+  } catch (error) {
+    errorAlert(`Incorrect email or password. Please try again`);
+    console.error(error);
+    removeLoginLoader();
+  }
+}
