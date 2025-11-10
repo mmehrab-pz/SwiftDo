@@ -4,41 +4,84 @@
 @layer base {
     @font-face {
         font-family: '300';
-        src: url(../asset/font/Poppins-Light.ttf);
+        src: url(../../asset/font/Poppins-Light.ttf);
     }
 
     @font-face {
         font-family: '400';
-        src: url(../asset/font/Poppins-Regular.ttf);
+        src: url(../../asset/font/Poppins-Regular.ttf);
     }
 
     @font-face {
         font-family: '500';
-        src: url(../asset/font/Poppins-Medium.ttf);
+        src: url(../../asset/font/Poppins-Medium.ttf);
     }
 
     @font-face {
         font-family: '600';
-        src: url(../asset/font/Poppins-SemiBold.ttf);
+        src: url(../../asset/font/Poppins-SemiBold.ttf);
     }
 
     @font-face {
         font-family: '700';
-        src: url(../asset/font/Poppins-Bold.ttf);
+        src: url(../../asset/font/Poppins-Bold.ttf);
     }
 
     @font-face {
         font-family: '800';
-        src: url(../asset/font/Poppins-ExtraBold.ttf);
+        src: url(../../asset/font/Poppins-ExtraBold.ttf);
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes taadaa {
+        0% {
+            transform: scaleX(1);
+        }
+
+        10%,
+        20% {
+            transform: scale3d(.95, .95, .95) rotate(-10deg);
+        }
+
+        30%,
+        50%,
+        70%,
+        90% {
+            transform: scaleX(1) rotate(10deg);
+        }
+
+        40%,
+        60%,
+        80% {
+            transform: rotate(-10deg);
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
     }
 }
 
 @layer components {
-
+    .spin {
+        animation: spin 3s linear infinite;
+    }
+    .tada{
+        animation: taadaa 1.5s linear infinite;
+    }
 }
 
 @layer utilities {
     .bt {
         @apply border border-black
+    }
+
+    .shadoow {
+        box-shadow: 0 .75rem 1.5rem #12263f08;
     }
 }
