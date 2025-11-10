@@ -195,14 +195,8 @@
   .z-100 {
     z-index: 100;
   }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
   .mt-1\.5 {
     margin-top: calc(var(--spacing) * 1.5);
-  }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
   }
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
@@ -222,14 +216,8 @@
   .mr-1\.5 {
     margin-right: calc(var(--spacing) * 1.5);
   }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
   .mr-2\.5 {
     margin-right: calc(var(--spacing) * 2.5);
-  }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
   }
   .ml-2\.5 {
     margin-left: calc(var(--spacing) * 2.5);
@@ -245,9 +233,6 @@
   }
   .inline {
     display: inline;
-  }
-  .table {
-    display: table;
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
@@ -291,17 +276,8 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -348,9 +324,6 @@
   .border-\[\#ced4da\] {
     border-color: #ced4da;
   }
-  .border-black {
-    border-color: var(--color-black);
-  }
   .bg-\[\#0D1017\] {
     background-color: #0D1017;
   }
@@ -359,9 +332,6 @@
   }
   .bg-\[\#556ee640\] {
     background-color: #556ee640;
-  }
-  .bg-\[\#E8F0FE\] {
-    background-color: #E8F0FE;
   }
   .bg-\[\#EFF2F7\] {
     background-color: #EFF2F7;
@@ -377,9 +347,6 @@
   }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
-  }
-  .bg-red-200 {
-    background-color: var(--color-red-200);
   }
   .bg-\[linear-gradient\(90deg\,rgba\(0\,255\,0\,0\.25\)0\%\,rgba\(252\,252\,252\,1\)35\%\)\] {
     background-image: linear-gradient(90deg,rgba(0,255,0,0.25)0%,rgba(252,252,252,1)35%);
@@ -447,16 +414,9 @@
   .capitalize {
     text-transform: capitalize;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-\[0_\.75rem_1\.5rem_\#12263f08\] {
     --tw-shadow: 0 .75rem 1.5rem var(--tw-shadow-color, #12263f08);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);
@@ -512,54 +472,14 @@
     font-family: '800';
     src: url(../asset/font/Poppins-ExtraBold.ttf);
   }
-  .loader {
-    width: 25px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: radial-gradient(farthest-side, #ffffff 94%, #0000) top/5px 5px no-repeat, conic-gradient(#0000 30%, #ffffff);
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
-    animation: l13 1s infinite linear;
-  }
-  @keyframes l13 {
-    100% {
-      transform: rotate(1turn);
-    }
-  }
 }
-@layer components {
-  .input-alert {
-    background-color: #ffc9c9 !important;
-  }
-  .input-ok {
-    background-color: #E8F0FE;
-  }
-}
+@layer components;
 @layer utilities {
   .bt {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-black);
   }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -643,11 +563,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;

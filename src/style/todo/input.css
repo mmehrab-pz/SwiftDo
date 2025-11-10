@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --watch */
+/* npx @tailwindcss/cli -i ./src/style/todo/input.css -o ./src/style/todo/output.css --watch */
 
 @layer base {
     @font-face {
@@ -31,36 +31,10 @@
         font-family: '800';
         src: url(../asset/font/Poppins-ExtraBold.ttf);
     }
-
-    /* HTML: <div class="loader"></div> */
-    .loader {
-        width: 25px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background:
-            radial-gradient(farthest-side, #ffffff 94%, #0000) top/5px 5px no-repeat,
-            conic-gradient(#0000 30%, #ffffff);
-        -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
-        animation: l13 1s infinite linear;
-    }
-
-    @keyframes l13 {
-        100% {
-            transform: rotate(1turn)
-        }
-    }
 }
 
 @layer components {
-    .input-alert {
-        /* @apply bg-red-200 text-white */
-        background-color: #ffc9c9 !important;
 
-    }
-
-    .input-ok {
-        @apply bg-[#E8F0FE]
-    }
 }
 
 @layer utilities {

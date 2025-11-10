@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:page1": " npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --content './index.html' --watch",
+    "watch:page2": "npx @tailwindcss/cli -i ./src/style/todo/input.css -o ./src/style/todo/output.css --content './todo.html' --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "type": "commonjs",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
+    "firebase": "^12.5.0",
     "tailwindcss": "^4.1.17"
   }
 }

@@ -169,14 +169,14 @@ async function checkEmail() {
     errorAlert("This email is already registered.");
     email = "";
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
-      arr[0].classList.remove("input-ok");
-      arr[0].classList.add("input-alert");
-      addRegexError("This email is already registered.", arr[0]);
+      arr[2].classList.remove("input-ok");
+      arr[2].classList.add("input-alert");
+      addRegexError("This email is already registered.", arr[2]);
     });
   } catch (error) {
     console.error(error);
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
-      removeRegexError(arr[0]);
+      removeRegexError(arr[2]);
     });
   }
 }
@@ -208,14 +208,14 @@ async function checkUsername() {
     errorAlert("This username is already registered.");
     username = "";
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
-      arr[1].classList.remove("input-ok");
-      arr[1].classList.add("input-alert");
-      addRegexError("This username is already registered.", arr[1]);
+      arr[3].classList.remove("input-ok");
+      arr[3].classList.add("input-alert");
+      addRegexError("This username is already registered.", arr[3]);
     });
   } catch (error) {
     console.error(error);
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
-      removeRegexError(arr[1]);
+      removeRegexError(arr[3]);
     });
   }
 }
