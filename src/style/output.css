@@ -216,6 +216,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .z-90 {
+    z-index: 90;
+  }
   .z-100 {
     z-index: 100;
   }
@@ -294,6 +297,10 @@
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
   }
+  .size-7 {
+    width: calc(var(--spacing) * 7);
+    height: calc(var(--spacing) * 7);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -305,6 +312,12 @@
   }
   .h-\[35px\] {
     height: 35px;
+  }
+  .h-\[38\] {
+    height: 38;
+  }
+  .h-\[38px\] {
+    height: 38px;
   }
   .h-\[70px\] {
     height: 70px;
@@ -330,6 +343,9 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
@@ -338,6 +354,9 @@
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
   .w-\[13px\] {
     width: 13px;
@@ -351,8 +370,17 @@
   .w-\[180px\] {
     width: 180px;
   }
+  .w-\[220px\] {
+    width: 220px;
+  }
   .w-\[250px\] {
     width: 250px;
+  }
+  .w-\[280\] {
+    width: 280;
+  }
+  .w-\[280px\] {
+    width: 280px;
   }
   .w-\[450px\] {
     width: 450px;
@@ -387,6 +415,9 @@
   .animate-spin {
     animation: var(--animate-spin);
   }
+  .cursor-alias {
+    cursor: alias;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -411,6 +442,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .rounded-\[4px\] {
+    border-radius: 4px;
+  }
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -431,6 +465,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-l-0 {
     border-left-style: var(--tw-border-style);
     border-left-width: 0px;
@@ -441,11 +479,41 @@
   .border-black {
     border-color: var(--color-black);
   }
+  .border-b-\[\#000000\] {
+    border-bottom-color: #000000;
+  }
+  .border-b-\[\#00000011\] {
+    border-bottom-color: #00000011;
+  }
+  .border-b-\[\#00000021\] {
+    border-bottom-color: #00000021;
+  }
+  .border-b-\[\#00000041\] {
+    border-bottom-color: #00000041;
+  }
+  .border-b-\[white\] {
+    border-bottom-color: white;
+  }
+  .bg-\[\#\#EFF2F7\] {
+    background-color: ##EFF2F7;
+  }
   .bg-\[\#0D1017\] {
     background-color: #0D1017;
   }
+  .bg-\[\#00000000\] {
+    background-color: #00000000;
+  }
   .bg-\[\#2A3042\] {
     background-color: #2A3042;
+  }
+  .bg-\[\#00000065\] {
+    background-color: #00000065;
+  }
+  .bg-\[\#343a408c\] {
+    background-color: #343a408c;
+  }
+  .bg-\[\#556EE6\] {
+    background-color: #556EE6;
   }
   .bg-\[\#556ee6\] {
     background-color: #556ee6;
@@ -459,11 +527,17 @@
   .bg-\[\#EFF2F7\] {
     background-color: #EFF2F7;
   }
+  .bg-\[\#F3F3F9\] {
+    background-color: #F3F3F9;
+  }
   .bg-\[\#F8F8FB\] {
     background-color: #F8F8FB;
   }
   .bg-\[\#F46A6A\] {
     background-color: #F46A6A;
+  }
+  .bg-\[black\] {
+    background-color: black;
   }
   .bg-\[white\] {
     background-color: white;
@@ -498,6 +572,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -507,11 +584,32 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+  .py-\[5px\] {
+    padding-block: 5px;
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
   .pt-\[70px\] {
     padding-top: 70px;
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
   .pb-7 {
     padding-bottom: calc(var(--spacing) * 7);
+  }
+  .pb-\[15px\] {
+    padding-bottom: 15px;
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-2\.5 {
+    padding-left: calc(var(--spacing) * 2.5);
   }
   .text-center {
     text-align: center;
@@ -562,6 +660,9 @@
   }
   .text-\[\#343a40\] {
     color: #343a40;
+  }
+  .text-\[\#444C54\] {
+    color: #444C54;
   }
   .text-\[\#555b6d\] {
     color: #555b6d;
@@ -647,9 +748,21 @@
       transition-duration: 300ms;
     }
   }
+  .placeholder\:text-\[\#74788d\] {
+    &::placeholder {
+      color: #74788d;
+    }
+  }
   .placeholder\:capitalize {
     &::placeholder {
       text-transform: capitalize;
+    }
+  }
+  .placeholder\:\*\:text-\[\#74788d\] {
+    &::placeholder {
+      :is(& > *) {
+        color: #74788d;
+      }
     }
   }
   .hover\:bg-\[\#485EC4\] {
