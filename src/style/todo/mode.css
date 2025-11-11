@@ -1,0 +1,42 @@
+:root {
+    --bg-color-one: #ffffff;
+    --bg-color-two: #F8F8FB;
+    --aside-txt-color: #545a6d;
+    --aside-icon-color: #7f8387;
+    --aside-item-act-color: #556ee6;
+    --aside-logo-color: black;
+    --header-item-color: #555b6d;
+    --header-text-color: #4e5460;
+    --header-search-text: #343a40;
+    --header-search-bg: #F3F3F9;
+    --secondary-text-color: #74788d;
+
+    --search-h1-color: #495057;
+    --search-title-color: #495057;
+    --search-btn-color: #EFF2F7;
+    --search-border-color: #00000011;
+}
+
+body.dark {
+    --bg-color-one: #2A3042;
+    --bg-color-two: #222736;
+    --aside-txt-color: #a6b0cf;
+    --aside-icon-color: #6a7187;
+    --aside-item-act-color: #ffffff;
+    --aside-logo-color: white;
+    --header-item-color: #a6b0cf;
+    --header-text-color: #a6b0cf;
+    --header-search-text: white;
+    --header-search-bg: #262B3C;
+    --secondary-text-color: white;
+
+    --search-h1-color: #f6f6f6;
+    --search-title-color: #a6b0cf;
+    --search-btn-color: #32394E;
+    --search-border-color: #ffffff11;
+}
+
+.mode-active{
+    background-color: #556EE6 !important;
+    color: white !important;
+}
