@@ -79,7 +79,7 @@
     <!-- -------------------------------------Curtain---------------------------------- -->
     <span id="curtain" class="w-full h-full absolute z-90 top-0 left-0 bg-[#343a408c] hidden"></span>
     <!-- -------------------------------------aside---------------------------------- -->
-    <aside id="aside" data-status="off" class="h-full w-[250px] bg-(--bg-color-one) duration-700">
+    <aside id="aside" data-status="off" class="h-full w-[250px] bg-(--bg-color-one)">
         <header class="w-full h-[70px]">
             <figure class="w-full h-full flex justify-center items-center">
                 <img src="src/asset/img/logo3.png" alt="logo" class="w-[30px] mr-2">
@@ -209,18 +209,66 @@
             </div>
             <div class="h-full flex">
                 <!-- ----lang--- -->
-                <div class="h-full px-3 ml-1 flex items-center cursor-pointer">
+                <div class="h-full px-3 ml-1 flex items-center cursor-pointer relative toka">
                     <figure>
                         <img src="src/asset/img/icon/usa.png" alt="" class="w-6">
                     </figure>
+                    <div class="w-40 absolute right-0 top-[105%] shadoow2 rounded-sm bg-(--bg-color-one) py-2 hidden">
+                        <figure class="w-full flex items-center px-6 py-1.5">
+                            <img src="src/asset/img/icon/spain.png" alt="" class="w-[18px]">
+                            <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">spanish</figcaption>
+                        </figure>
+                        <figure class="w-full flex items-center px-6 py-1.5">
+                            <img src="src/asset/img/icon/germany.png" alt="" class="w-[18px]">
+                            <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">german</figcaption>
+                        </figure>
+                        <figure class="w-full flex items-center px-6 py-1.5">
+                            <img src="src/asset/img/icon/italy.png" alt="" class="w-[18px]">
+                            <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">italian</figcaption>
+                        </figure>
+                        <figure class="w-full flex items-center px-6 py-1.5">
+                            <img src="src/asset/img/icon/japan.png" alt="" class="w-[18px]">
+                            <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">japanese</figcaption>
+                        </figure>
+                        <figure class="w-full flex items-center px-6 py-1.5 bg-(--bg-color-two)">
+                            <img src="src/asset/img/icon/usa.png" alt="" class="w-[18px]">
+                            <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">english</figcaption>
+                        </figure>
+                    </div>
                 </div>
                 <!-- ----media--- -->
-                <div class="h-full px-3 ml-1 flex items-center cursor-pointer">
+                <div class="h-full px-3 ml-1 flex items-center cursor-pointer relative toka">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6 text-(--header-item-color)">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                     </svg>
+                    <div class="w-[320px] absolute right-0 top-[105%] shadoow2 rounded-sm bg-(--bg-color-one) p-2 flex flex-wrap hidden">
+                        <a href="https://pourzakaria.com/" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/mehrab.webp" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">mehrab</h5>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mehrab-pourzakaria-1b2492237/" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/linkedin.png" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">linkedin</h5>
+                        </a>
+                        <a href="https://github.com/mmehrab-pz" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/git2.png" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">github</h5>
+                        </a>
+                        <a href="https://mmehrab-pz.github.io/weather/" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/weather.png" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">weather</h5>
+                        </a>
+                        <a href="https://www.instagram.com/mehrab.poorzakaria_web/" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/instagram.png" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">instagram</h5>
+                        </a>
+                        <a href="https://pourzakaria.com/lumos/" target="_blank" class="w-1/3 px-3 pt-4 pb-2 flex flex-col justify-center items-center hover:bg-(--bg-color-two) duration-200">
+                            <img src="src/asset/img/icon/lumos.png" alt="" class="w-10">
+                            <h5 class="capitalize text-[13px] font-['400'] text-(--secondary-text-color) my-1.5">lumos</h5>
+                        </a>
+                    </div>
                 </div>
                 <!-- ----full screen--- -->
                 <div id="fullBtn" class="h-full flex items-center px-3 cursor-pointer ml-1">
@@ -234,10 +282,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
                     </svg>
-
                 </div>
                 <!-- ----notification--- -->
-                <div class="h-full px-3 flex items-center relative cursor-pointer ml-1">
+                <div class="h-full px-3 flex items-center relative cursor-pointer ml-1 toka">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6 text-(--header-item-color) tada">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -245,9 +292,10 @@
                     </svg>
                     <span
                         class="flex justify-center items-center w-4 h-4 rounded-full bg-[#F46A6A] text-[10px] font-['500'] text-[white] absolute top-[13px] right-2.5">3</span>
+                        <div></div>
                 </div>
                 <!-- ----username--- -->
-                <div class="h-full px-3 flex cursor-pointer ml-1">
+                <div class="h-full px-3 flex cursor-pointer ml-1 toka">
                     <figure class="flex items-center">
                         <img src="src/asset/img/mehrab.jpg" alt="" class="w-9 h-9 rounded-full">
                         <figcaption class="text-[13px] font-['400'] text-(--header-text-color) ml-2 flex items-center">
@@ -260,6 +308,7 @@
                             </svg>
                         </figcaption>
                     </figure>
+                    <div></div>
                 </div>
                 <!-- ----setting--- -->
                 <div id="openSet" class="h-full flex items-center px-3 cursor-pointer ml-1">

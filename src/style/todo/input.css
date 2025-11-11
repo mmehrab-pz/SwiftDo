@@ -84,4 +84,7 @@
     .shadoow {
         box-shadow: 0 .75rem 1.5rem #12263f08;
     }
+    .shadoow2 {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    }
 }

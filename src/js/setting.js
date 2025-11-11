@@ -2,7 +2,7 @@ const body = document.body;
 // ------------------open & close setting box--------------------
 const curtain = document.getElementById("curtain");
 const settingBox = document.getElementById("settingBox");
-const openSet = document.getElementById("openSet")
+const openSet = document.getElementById("openSet");
 
 openSet.addEventListener("click", () => {
   curtain.classList.remove("hidden");
@@ -15,13 +15,13 @@ document.getElementById("closeSet").addEventListener("click", () => {
   curtain.classList.add("hidden");
 });
 
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
   if (!settingBox.contains(event.target) && !openSet.contains(event.target)) {
     settingBox.classList.remove("right-[0px]");
     settingBox.classList.add("right-[-280px]");
     curtain.classList.add("hidden");
   }
-})
+});
 // ------------------dark mode and light mode--------------------
 const lightBtn = document.getElementById("light-btn");
 const darkBtn = document.getElementById("dark-btn");
@@ -97,15 +97,35 @@ document.getElementById("menuBtn").addEventListener("click", () => {
   }
 });
 // ------------------fullscreen mode--------------------
-const fullBtn = document.getElementById('fullBtn')
-fullBtn.addEventListener('click', () => {
+const fullBtn = document.getElementById("fullBtn");
+fullBtn.addEventListener("click", () => {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen()
-    fullBtn.firstElementChild.classList.add('hidden')
-    fullBtn.lastElementChild.classList.remove('hidden')
+    document.documentElement.requestFullscreen();
+    fullBtn.firstElementChild.classList.add("hidden");
+    fullBtn.lastElementChild.classList.remove("hidden");
   } else {
     document.exitFullscreen();
-    fullBtn.firstElementChild.classList.remove('hidden')
-    fullBtn.lastElementChild.classList.add('hidden')
+    fullBtn.firstElementChild.classList.remove("hidden");
+    fullBtn.lastElementChild.classList.add("hidden");
   }
-})
+});
+// ------------------header btn--------------------
+const toka = document.querySelectorAll(".toka");
+
+toka.forEach((item, i, arr) => {
+  item.addEventListener("click", (e) => {
+    e.stopPropagation();
+    arr.forEach((item) => {
+      item.lastElementChild.classList.add("hidden");
+    });
+    item.lastElementChild.classList.remove("hidden");
+  });
+});
+document.addEventListener("click", (e) => {
+  toka.forEach((item) => {
+    // if(!item.contains(e.target) || item.contains(e.target) ){
+    //   item.lastElementChild.classList.add("hidden");
+    // }
+    item.lastElementChild.classList.add("hidden");
+  });
+});

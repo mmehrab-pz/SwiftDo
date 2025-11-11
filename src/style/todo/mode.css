@@ -10,11 +10,13 @@
     --header-search-text: #343a40;
     --header-search-bg: #F3F3F9;
     --secondary-text-color: #74788d;
-
+    /* ---------- */
     --search-h1-color: #495057;
     --search-title-color: #495057;
     --search-btn-color: #EFF2F7;
     --search-border-color: #00000011;
+    /* ---------- */
+    --txt-color: #343a40;
 }
 
 body.dark {
@@ -29,11 +31,14 @@ body.dark {
     --header-search-text: white;
     --header-search-bg: #262B3C;
     --secondary-text-color: white;
-
+    /* ---------- */
     --search-h1-color: #f6f6f6;
     --search-title-color: #a6b0cf;
     --search-btn-color: #32394E;
     --search-border-color: #ffffff11;
+    /* ---------- */
+    --txt-color: white;
+
 }
 
 body.color1 {
