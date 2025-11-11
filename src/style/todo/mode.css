@@ -36,7 +36,60 @@ body.dark {
     --search-border-color: #ffffff11;
 }
 
-.mode-active{
+body.color1 {
+    --bg-color-one: #556EE6;
+
+}
+
+.mode-active {
     background-color: #556EE6 !important;
     color: white !important;
+}
+
+.menu-icon {
+    width: 70px !important;
+
+    >header {
+        >figure {
+            >img {
+                margin-right: 0 !important;
+            }
+
+            >figcaption {
+                display: none !important;
+            }
+        }
+    }
+
+    >nav {
+        >ul {
+            >li {
+                justify-content: center !important;
+
+                >h2 {
+                    display: none !important;
+                    margin-left: 0 !important;
+                }
+
+                >div {
+                    justify-content: center !important;
+
+                    >h2 {
+                        display: none !important;
+                        margin-left: 0 !important;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    >svg {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-icon2 {
+    width: calc(100% - 70px) !important;
 }

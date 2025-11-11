@@ -12,8 +12,10 @@
 
 <body class="w-full h-dvh flex overflow-hidden relative select-none">
     <!-- -------------------------------------setting box---------------------------------- -->
-    <section id="settingBox" class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[-280px] duration-200 z-100">
-        <header class="w-full px-4 h-[70px] flex items-center justify-between border-b border-b-(--search-border-color)">
+    <section id="settingBox"
+        class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[-280px] duration-200 z-100">
+        <header
+            class="w-full px-4 h-[70px] flex items-center justify-between border-b border-b-(--search-border-color)">
             <h2 class="capitalize text-[16px] font-['500'] text-(--search-h1-color)">settings</h2>
             <svg id="closeSet" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-7 text-(--search-h1-color) cursor-pointer">
@@ -37,15 +39,16 @@
             <div class="w-full pt-1 pb-[15px] border-b border-b-(--search-border-color) mt-3">
                 <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar type</h3>
                 <div class="flex mt-2">
-                    <span
-                        class="text-[14px] font-['500'] text-[white] capitalize py-[5px] px-2.5 bg-[#556EE6] rounded-sm cursor-pointer mr-2">default</span>
-                    <span
+                    <span id="normSide"
+                        class="text-[14px] font-['500'] text-(--search-title-color) bg-(--search-btn-color) capitalize py-[5px] px-2.5 mode-active rounded-sm cursor-pointer mr-2">default</span>
+                    <span id="iconSide"
                         class="text-[14px] font-['500'] text-(--search-title-color) capitalize py-[5px] px-2.5 bg-(--search-btn-color) rounded-sm cursor-pointer">icon</span>
                 </div>
             </div>
             <!-- -------left sidebar color option -->
             <div class="w-full pt-1 pb-[15px] border-b border-b-(--search-border-color) mt-3">
-                <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar color option</h3>
+                <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar color option
+                </h3>
                 <div class="flex mt-2">
                     <span
                         class="flex justify-center items-center w-[30px] h-[30px] rounded-full mr-1.5 bg-[#EFF2F7] cursor-pointer border border-[#556ee6]"></span>
@@ -76,7 +79,7 @@
     <!-- -------------------------------------Curtain---------------------------------- -->
     <span id="curtain" class="w-full h-full absolute z-90 top-0 left-0 bg-[#343a408c] hidden"></span>
     <!-- -------------------------------------aside---------------------------------- -->
-    <aside class="h-full w-[250px] bg-(--bg-color-one)">
+    <aside id="aside" data-status="off" class="h-full w-[250px] bg-(--bg-color-one) duration-700">
         <header class="w-full h-[70px]">
             <figure class="w-full h-full flex justify-center items-center">
                 <img src="src/asset/img/logo3.png" alt="logo" class="w-[30px] mr-2">
@@ -86,7 +89,8 @@
         <nav class="w-fill mt-2.5 mb-[30px]">
             <ul class="w-full">
                 <!-- -------dashboard -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-item-act-color)">
                         <path
@@ -116,7 +120,8 @@
                     </svg>
                 </li>
                 <!-- -------completed -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -129,7 +134,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">completed</h2>
                 </li>
                 <!-- -------trash -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -139,7 +145,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">trash</h2>
                 </li>
                 <!-- -------profile -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -149,7 +156,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">profile</h2>
                 </li>
                 <!-- -------support -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -159,7 +167,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">support</h2>
                 </li>
                 <!-- -------copyright -->
-                <li class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li
+                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -172,11 +181,11 @@
         </nav>
     </aside>
     <!-- -------------------------------------main---------------------------------- -->
-    <main class="h-full w-[calc(100%-250px)] relative">
+    <main id="main" class="h-full w-[calc(100%-250px)] relative">
         <header class="w-full h-[70px] bg-(--bg-color-one) shadoow absolute left-0 top-0 flex justify-between pr-3">
             <div class="h-full flex">
                 <!-- ----menu--- -->
-                <div class="h-full px-4 flex items-center cursor-pointer">
+                <div id="menuBtn" class="h-full px-4 flex items-center cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="size-6 text-(--header-item-color)">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -214,12 +223,18 @@
                     </svg>
                 </div>
                 <!-- ----full screen--- -->
-                <div class="h-full flex items-center px-3 cursor-pointer ml-1">
+                <div id="fullBtn" class="h-full flex items-center px-3 cursor-pointer ml-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6 text-(--header-item-color)">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
                     </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 text-(--header-item-color) hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
+                    </svg>
+
                 </div>
                 <!-- ----notification--- -->
                 <div class="h-full px-3 flex items-center relative cursor-pointer ml-1">
@@ -262,4 +277,5 @@
     </main>
 </body>
 <script src="src/js/setting.js"></script>
+
 </html>
