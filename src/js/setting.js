@@ -2,8 +2,9 @@ const body = document.body;
 // ------------------open & close setting box--------------------
 const curtain = document.getElementById("curtain");
 const settingBox = document.getElementById("settingBox");
+const openSet = document.getElementById("openSet")
 
-document.getElementById("openSet").addEventListener("click", () => {
+openSet.addEventListener("click", () => {
   curtain.classList.remove("hidden");
   settingBox.classList.remove("right-[-280px]");
   settingBox.classList.add("right-[0px]");
@@ -13,6 +14,14 @@ document.getElementById("closeSet").addEventListener("click", () => {
   settingBox.classList.add("right-[-280px]");
   curtain.classList.add("hidden");
 });
+
+document.addEventListener('click', (event) => {
+  if (!settingBox.contains(event.target) && !openSet.contains(event.target)) {
+    settingBox.classList.remove("right-[0px]");
+    settingBox.classList.add("right-[-280px]");
+    curtain.classList.add("hidden");
+  }
+})
 // ------------------dark mode and light mode--------------------
 const lightBtn = document.getElementById("light-btn");
 const darkBtn = document.getElementById("dark-btn");
