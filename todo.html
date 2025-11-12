@@ -89,20 +89,20 @@
         <nav class="w-fill mt-2.5 mb-[30px]">
             <ul class="w-full">
                 <!-- -------dashboard -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="dashboard"
+                    class="navbar nav-active px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-5 text-(--aside-item-act-color)">
+                        class="size-5 text-(--aside-icon-color)">
                         <path
                             d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                         <path
                             d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                     </svg>
-                    <h2 class="text-[13px] capitalize font-['400'] text-(--aside-item-act-color) ml-3">dashboard</h2>
+                    <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">dashboard</h2>
                 </li>
                 <!-- -------my list -->
-                <li
-                    class="px-5 py-3 flex items-center justify-between cursor-pointer hover:**:text-(--aside-item-act-color) **:duration-300">
+                <li data-name="list"
+                    class="navbar px-5 py-3 flex items-center justify-between cursor-pointer hover:**:text-(--aside-item-act-color) **:duration-300">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             class="size-5 text-(--aside-icon-color)">
@@ -120,8 +120,8 @@
                     </svg>
                 </li>
                 <!-- -------completed -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="completed"
+                    class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -134,8 +134,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">completed</h2>
                 </li>
                 <!-- -------trash -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="trash"
+                    class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -145,8 +145,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">trash</h2>
                 </li>
                 <!-- -------profile -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="profile"
+                    class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -156,8 +156,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">profile</h2>
                 </li>
                 <!-- -------support -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="support"
+                    class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -167,8 +167,8 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">support</h2>
                 </li>
                 <!-- -------copyright -->
-                <li
-                    class="px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
+                <li data-name="copyright"
+                    class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
                         <path fill-rule="evenodd"
@@ -182,7 +182,7 @@
     </aside>
     <!-- -------------------------------------main---------------------------------- -->
     <main id="main" class="h-full w-[calc(100%-250px)] relative">
-        <header class="w-full h-[70px] bg-(--bg-color-one) shadoow absolute left-0 top-0 flex justify-between pr-3">
+        <header class="w-full h-[70px] bg-(--bg-color-one) shadoow absolute left-0 top-0 flex justify-between pr-3 z-60">
             <div class="h-full flex">
                 <!-- ----menu--- -->
                 <div id="menuBtn" class="h-full px-4 flex items-center cursor-pointer">
@@ -302,7 +302,7 @@
                     </svg>
                 </div>
                 <!-- ----notification--- -->
-                <div class="h-full px-3 flex items-center relative cursor-pointer relative ml-1 toka">
+                <div class="h-full px-3 flex items-center relative cursor-pointer ml-1 toka">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6 text-(--header-item-color) tada">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -375,7 +375,7 @@
                         </figcaption>
                     </figure>
                     <div class="w-40 absolute right-0 top-[105%] shadoow2 rounded-sm bg-(--bg-color-one) py-2 hidden">
-                        <div class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <div data-name="profile" class="navbar w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-(--txt-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -430,9 +430,24 @@
                 </div>
             </div>
         </header>
-        <section class="w-full h-full pt-[70px] bg-(--bg-color-two)"></section>
+        <section class="w-full h-full pt-[70px] bg-(--bg-color-two) relative">
+            <!-- ----------dashboard -->
+            <section data-name="dashboard" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 ">dashboard</section>
+            <!-- ----------my list -->
+            <section data-name="list" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">my list</section>
+            <!-- ----------completed -->
+            <section data-name="completed" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">completed</section>
+            <!-- ----------trash -->
+            <section data-name="trash" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">trash</section>
+            <!-- ----------profile -->
+            <section data-name="profile" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">profile</section>
+            <!-- ----------support -->
+            <section data-name="support" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">support</section>
+            <!-- ----------copyright -->
+            <section data-name="copyright" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">copyright</section>
+        </section>
     </main>
 </body>
 <script src="src/js/setting.js"></script>
-
+<script src="src/js/navigation.js"></script>
 </html>

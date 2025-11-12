@@ -98,3 +98,13 @@ body.color1 {
 .menu-icon2 {
     width: calc(100% - 70px) !important;
 }
+
+.nav-active {
+    >* {
+        color: var(--aside-item-act-color) !important;
+    }
+
+    >div>*{
+        color: var(--aside-item-act-color) !important;
+    }
+}
