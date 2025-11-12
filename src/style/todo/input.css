@@ -104,3 +104,12 @@
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
     }
 }
+
+@theme{
+    --color-yellow: #FFBE0B;
+    --color-pink: #FF006E;
+    --color-blue: #3A86FF;
+    --color-purple: #8338EC;
+    --color-orange: #FB5607;
+    --color-green: #B4E50D;
+}
