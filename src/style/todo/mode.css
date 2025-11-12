@@ -17,6 +17,9 @@
     --search-border-color: #00000011;
     /* ---------- */
     --txt-color: #343a40;
+    /* ---------- */
+    --txt-color2: #74788d;
+
 }
 
 body.dark {
@@ -38,6 +41,9 @@ body.dark {
     --search-border-color: #ffffff11;
     /* ---------- */
     --txt-color: white;
+    /* ---------- */
+    --txt-color2: #c3cbe4;
+
 
 }
 

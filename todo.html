@@ -182,7 +182,8 @@
     </aside>
     <!-- -------------------------------------main---------------------------------- -->
     <main id="main" class="h-full w-[calc(100%-250px)] relative">
-        <header class="w-full h-[70px] bg-(--bg-color-one) shadoow absolute left-0 top-0 flex justify-between pr-3 z-60">
+        <header
+            class="w-full h-[70px] bg-(--bg-color-one) shadoow absolute left-0 top-0 flex justify-between pr-3 z-60">
             <div class="h-full flex">
                 <!-- ----menu--- -->
                 <div id="menuBtn" class="h-full px-4 flex items-center cursor-pointer">
@@ -375,7 +376,8 @@
                         </figcaption>
                     </figure>
                     <div class="w-40 absolute right-0 top-[105%] shadoow2 rounded-sm bg-(--bg-color-one) py-2 hidden">
-                        <div data-name="profile" class="navbar w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <div data-name="profile"
+                            class="navbar w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-(--txt-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -409,7 +411,8 @@
                             </svg>
                             <h3 class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-2">lock screen</h3>
                         </div>
-                        <div class="w-full flex items-center px-6 pb-1.5 pt-3 hover:bg-(--bg-color-two) duration-200 border-t border-t-(--search-border-color)">
+                        <div
+                            class="w-full flex items-center px-6 pb-1.5 pt-3 hover:bg-(--bg-color-two) duration-200 border-t border-t-(--search-border-color)">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-red-500">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -430,24 +433,243 @@
                 </div>
             </div>
         </header>
-        <section class="w-full h-full pt-[70px] bg-(--bg-color-two) relative">
+        <section class="w-full h-[calc(100%-70px)] mt-[70px] bg-(--bg-color-two) relative">
             <!-- ----------dashboard -->
-            <section data-name="dashboard" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 ">dashboard</section>
+            <section data-name="dashboard" class="page w-full h-full px-6 py-6 absolute top-0 left-0 z-50 scrollHide">
+                <h2 class="text-[16px] font-['600'] text-(--txt-color) uppercase">dashboard</h2>
+                <div class="w-full flex  mt-6 flex-wrap">
+                    <!-- ------------work -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#FFBE0B] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all work task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your work tasks are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------Shopping / Finance -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#FF006E] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all
+                                        Shopping / Finance task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your Shopping /
+                                        Finance tasks are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------ Study -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#3A86FF] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all
+                                        Study task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your Study tasks
+                                        are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------ Project -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#8338EC] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all
+                                        Project task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your Project tasks
+                                        are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------ game -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#FB5607] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all
+                                        game task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your game tasks
+                                        are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------ travel -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 h-[270px] p-2.5">
+                        <div class="w-full h-full rounded-sm overflow-hidden shadoow">
+                            <div class="w-full h-[45%] bg-[#B4E50D] p-4 flex justify-between items-center">
+                                <span class="text-[60px] font-['500'] text-(--txt-color)">0</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-[60px] text-(--txt-color)">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
+                                </svg>
+                            </div>
+                            <div
+                                class="w-full h-[55%] bg-(--bg-color-one) p-4 flex flex-col items-start justify-between">
+                                <div>
+                                    <h4 class="capitalize font-['400'] text-(--txt-color) text-[20px]">all
+                                        travel task
+                                    </h4>
+                                    <p class="text-[13px] font-['300'] text-(--txt-color2)">All your travel tasks
+                                        are here
+                                        — click the button to view them.</p>
+                                </div>
+                                <span
+                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                    view list
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- ----------my list -->
-            <section data-name="list" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">my list</section>
+            <section data-name="list"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                my list</section>
             <!-- ----------completed -->
-            <section data-name="completed" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">completed</section>
+            <section data-name="completed"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                completed</section>
             <!-- ----------trash -->
-            <section data-name="trash" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">trash</section>
+            <section data-name="trash"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                trash</section>
             <!-- ----------profile -->
-            <section data-name="profile" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">profile</section>
+            <section data-name="profile"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                profile</section>
             <!-- ----------support -->
-            <section data-name="support" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">support</section>
+            <section data-name="support"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                support</section>
             <!-- ----------copyright -->
-            <section data-name="copyright" class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">copyright</section>
+            <section data-name="copyright"
+                class="page w-full h-full flex justify-center items-center text-white text-[40px] font-bold absolute top-0 left-0 z-50 hidden">
+                copyright</section>
         </section>
     </main>
 </body>
 <script src="src/js/setting.js"></script>
 <script src="src/js/navigation.js"></script>
+
 </html>

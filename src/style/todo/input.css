@@ -65,25 +65,41 @@
             transform: scaleX(1);
         }
     }
+
+    .scrollHide {
+        overflow-y: auto;
+        /* یا scroll */
+        scrollbar-width: none;
+        /* برای Firefox */
+        -ms-overflow-style: none;
+        /* برای IE و Edge قدیمی */
+    }
+
+    .scrollHide::-webkit-scrollbar {
+        display: none;
+        /* برای Chrome، Safari و Opera */
+    }
 }
 
 @layer components {
     .spin {
         animation: spin 3s linear infinite;
     }
-    .tada{
+
+    .tada {
         animation: taadaa 1.5s linear infinite;
     }
 }
 
 @layer utilities {
     .bt {
-        @apply border border-black
+        @apply border border-white
     }
 
     .shadoow {
         box-shadow: 0 .75rem 1.5rem #12263f08;
     }
+
     .shadoow2 {
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
     }
