@@ -79,6 +79,7 @@
         display: none;
         /* برای Chrome، Safari و Opera */
     }
+
 }
 
 @layer components {
@@ -89,6 +90,7 @@
     .tada {
         animation: taadaa 1.5s linear infinite;
     }
+
 }
 
 @layer utilities {

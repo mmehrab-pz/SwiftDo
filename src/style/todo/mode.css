@@ -122,6 +122,7 @@ body.color1 {
     >svg {
         color: var(--aside-item-act-color) !important;
     }
+
     >h2 {
         color: var(--aside-item-act-color) !important;
     }
@@ -167,12 +168,33 @@ body.color1 {
             }
         }
 
-        &:nth-of-type(2) {
+        /* &:nth-of-type(2) {
             height: 200px !important;
-        }
+        } */
     }
 }
 
-.active-task-li{
+.active-task-li {
     color: var(--aside-item-act-color) !important;
+}
+
+.task {
+    width: 100%;
+    background-color: var(--bg-color-one);
+    margin-bottom: 10px;
+    box-shadow: 0 .75rem 1.5rem #12263f08;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.desc {
+    white-space: normal;
+    /* متن بتونه چندخطی بشه */
+    word-wrap: break-word;
+    /* کلمه‌های خیلی بلند بشکنه */
+    overflow-wrap: break-word;
+    /* برای مرورگرهای مدرن */
+    line-height: 1.6;
+    /* خوانایی بهتر */
 }
