@@ -733,7 +733,47 @@
                         </div>
                     </div>
                     <div class=" h-full w-1/3 p-2.5">
-                        <div class="w-full h-full bg-(--bg-color-one) p-5 rounded-sm shadoow">
+                        <div class="w-full h-full bg-(--bg-color-one) p-5 rounded-sm shadoow scrollHide">
+                            <!-- ----------form -------------->
+                            <div class="w-full">
+                                <h3 class="capitalize font-['400'] text-(--txt-color) text-[20px] mb-3.5">create your
+                                    task</h3>
+                                <!-- ------title----- -->
+                                <h3 class="capitalize font-['400'] text-(--txt-color2) text-[16px] mb-2.5">give your
+                                    task a title</h3>
+                                <input type="text" name="" id=""
+                                    class="w-full h-10 bg-(--bg-color-two) rounded-sm outline-1 -outline-offset-1 outline-white/10 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 text-(--txt-color) pl-2.5 mb-2.5">
+                                <!-- ------category----- -->
+                                <h3 class="capitalize font-['400'] text-(--txt-color2) text-[16px] mb-2.5">pick a
+                                    category</h3>
+                                <div class="mt-2 grid grid-cols-1 h-10 mb-2.5">
+                                    <select id="country" name="country" autocomplete="country-name"
+                                        class="col-start-1 row-start-1 w-full appearance-none cursor-pointer rounded-md bg-(--bg-color-two) font-['400'] py-1.5 pr-8 pl-3 text-base text-(--txt-color) outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+                                        <option value="" disabled selected>choose a category</option>
+                                        <option value="work">work</option>
+                                        <option value="shopping">shopping / finance</option>
+                                        <option value="study">study</option>
+                                        <option value="project">project</option>
+                                        <option value="game">game</option>
+                                        <option value="teravel">teravel</option>
+                                    </select>
+                                    <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-400 sm:size-4">
+                                        <path
+                                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <!-- ------description----- -->
+                                <h3 class="capitalize font-['400'] text-(--txt-color2) text-[16px] mb-2.5">Write a short
+                                    description</h3>
+                                <textarea id="about" name="about" rows="3"
+                                    class="block w-full rounded-md bg-(--bg-color-two) scrollHide px-3 py-1.5 text-base text-(--txt-color) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 mb-2.5"></textarea>
+                                <!-- ------button----- -->
+                                <span class="h-10 w-full flex justify-center items-center capitalize font-['400'] text-(--txt-color) text-[16px] bg-[#556ee6] rounded-sm cursor-pointer">generate</span>
+                            </div>
+                            <!-- ------------------------------hint -->
+                            <hr class="my-4 text-(--txt-color2)">
                             <h2 class="text-xl font-semibold mb-3 text-(--txt-color) font-['400']">
                                 How to Use the Task Manager
                             </h2>
@@ -745,21 +785,26 @@
 
                             <ul class="list-disc list-inside space-y-2 text-(--txt-color2)">
                                 <li>
-                                    <strong class="text-(--txt-color)">Add new tasks</strong> under different <strong class="text-(--txt-color)">categories</strong>
+                                    <strong class="text-(--txt-color)">Add new tasks</strong> under different <strong
+                                        class="text-(--txt-color)">categories</strong>
                                     (e.g. <em>Work</em>, <em>Personal</em>, <em>Shopping</em>).
                                 </li>
                                 <li>
-                                    <strong class="text-(--txt-color)">Edit</strong> your existing tasks anytime to update their details.
+                                    <strong class="text-(--txt-color)">Edit</strong> your existing tasks anytime to
+                                    update their details.
                                 </li>
                                 <li>
-                                    <strong class="text-(--txt-color)">Delete</strong> tasks you no longer need with a single click.
+                                    <strong class="text-(--txt-color)">Delete</strong> tasks you no longer need with a
+                                    single click.
                                 </li>
                                 <li>
-                                    <strong class="text-(--txt-color)">Mark tasks as completed</strong> once you’ve finished them to
+                                    <strong class="text-(--txt-color)">Mark tasks as completed</strong> once you’ve
+                                    finished them to
                                     track your progress.
                                 </li>
                                 <li>
-                                    Use <strong class="text-(--txt-color)">filters or categories</strong> to view only the tasks you want.
+                                    Use <strong class="text-(--txt-color)">filters or categories</strong> to view only
+                                    the tasks you want.
                                 </li>
                             </ul>
 
@@ -773,7 +818,8 @@
                             </div>
 
                             <footer class="mt-5 text-slate-400 text-sm">
-                                Need help? Click the <strong class="cursor-pointer">Help</strong> icon or contact support.
+                                Need help? Click the <strong class="cursor-pointer">Help</strong> icon or contact
+                                support.
                             </footer>
                         </div>
                     </div>
