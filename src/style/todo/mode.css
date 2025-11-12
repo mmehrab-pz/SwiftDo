@@ -119,7 +119,10 @@ body.color1 {
 }
 
 .nav-active {
-    >* {
+    >svg {
+        color: var(--aside-item-act-color) !important;
+    }
+    >h2 {
         color: var(--aside-item-act-color) !important;
     }
 
@@ -168,4 +171,8 @@ body.color1 {
             height: 200px !important;
         }
     }
+}
+
+.active-task-li{
+    color: var(--aside-item-act-color) !important;
 }

@@ -10,6 +10,7 @@
     --color-red-200: oklch(88.5% 0.062 18.334);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
@@ -437,6 +438,9 @@
   .h-\[55\%\] {
     height: 55%;
   }
+  .h-\[70\] {
+    height: 70;
+  }
   .h-\[70px\] {
     height: 70px;
   }
@@ -461,8 +465,20 @@
   .h-\[500px\] {
     height: 500px;
   }
+  .h-\[calc\(100\%-30px\)\] {
+    height: calc(100% - 30px);
+  }
+  .h-\[calc\(100\%-50px\)\] {
+    height: calc(100% - 50px);
+  }
+  .h-\[calc\(100\%-70p\)\] {
+    height: calc(100% - 70p);
+  }
   .h-\[calc\(100\%-70px\)\] {
     height: calc(100% - 70px);
+  }
+  .h-\[calc\] {
+    height: calc;
   }
   .h-dvh {
     height: 100dvh;
@@ -773,6 +789,9 @@
   .bg-\[white\] {
     background-color: white;
   }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
@@ -881,6 +900,9 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
   }
@@ -898,6 +920,9 @@
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pb-7 {
     padding-bottom: calc(var(--spacing) * 7);
@@ -977,6 +1002,9 @@
   .text-\[40px\] {
     font-size: 40px;
   }
+  .text-\[50px\] {
+    font-size: 50px;
+  }
   .text-\[60px\] {
     font-size: 60px;
   }
@@ -990,6 +1018,9 @@
   }
   .text-\(--aside-icon-color\) {
     color: var(--aside-icon-color);
+  }
+  .text-\(--aside-item-act-color\) {
+    color: var(--aside-item-act-color);
   }
   .text-\(--aside-logo-color\) {
     color: var(--aside-logo-color);
@@ -1250,6 +1281,16 @@
   .md\:w-1\/2 {
     @media (width >= 48rem) {
       width: calc(1/2 * 100%);
+    }
+  }
+  .md\:w-1\/3 {
+    @media (width >= 48rem) {
+      width: calc(1/3 * 100%);
+    }
+  }
+  .md\:w-2\/3 {
+    @media (width >= 48rem) {
+      width: calc(2/3 * 100%);
     }
   }
   .md\:w-\[calc\(100\%-250px\)\] {
