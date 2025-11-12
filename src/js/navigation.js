@@ -4,8 +4,14 @@ const pages = document.querySelectorAll(".page");
  nav.forEach((item) => {
    item.addEventListener("click", () => {
      let name = item.dataset.name;
-     nav.forEach(item=>item.classList.remove('nav-active'))
+     nav.forEach(item=>{
+        item.classList.remove('nav-active')
+        item.lastElementChild.classList.remove('active-list')
+    })
      item.classList.add('nav-active')
+      if(name == 'list'){
+         item.lastElementChild.classList.toggle('active-list')
+        }
      pages.forEach((page) => {
        page.classList.add("hidden");
        if (name == page.dataset.name) {
