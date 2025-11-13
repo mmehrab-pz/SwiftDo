@@ -57,11 +57,11 @@ function taskGen() {
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
-                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+                                 <svg onclick="undo(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
                                     class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible hidden">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                <svg onclick="trash(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
                                     class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-4 opacity-0 invisible">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -84,10 +84,9 @@ function taskGen() {
                         </div>
                     </div>
     `;
-  if (document.querySelector("#all>span")) {
-    document.getElementById("all").innerHTML = "";
-  }
+
   document.getElementById("all").appendChild(task);
+  checkerAll("all");
   let boxHeight = "";
   requestAnimationFrame(() => {
     const descBox = task.querySelector(`.dec`);
@@ -143,14 +142,55 @@ function complete(item, e) {
   task.remove();
   const completedBox = document.getElementById("completedBox");
   completedBox.appendChild(task);
+  checkerAll("all");
+  checkerAll("completedBox");
   item.classList.add("hidden");
   item.nextElementSibling.classList.remove("hidden");
+
+  task.classList.remove("active-task");
+  task.lastElementChild.style.height = "0px";
+  task.dataset.status = "off";
+  para()
+}
+// ---------delete
+function trash(item,e){
+  e.stopPropagation();
+  const task = item.closest(".task");
+  task.remove();
+  const trashBox = document.getElementById("trashBox");
+  trashBox.appendChild(task);
+  checkerAll("all");
+  checkerAll("trashBox");
+  item.classList.add("hidden");
+  item.nextElementSibling.classList.remove("hidden");
+
+  task.classList.remove("active-task");
+  task.lastElementChild.style.height = "0px";
+  task.dataset.status = "off";
+  para()
+}
+// ---------undo
+function undo(item, e) {
+  e.stopPropagation();
+  const task = item.closest(".task");
+  task.remove();
+  checkerAll("completedBox");
+  taskList.appendChild(task);
+  checkerAll("all");
+    item.classList.add("hidden");
+  item.previousElementSibling.classList.remove("hidden");
+  task.classList.remove("active-task");
+  task.lastElementChild.style.height = "0px";
+  task.dataset.status = "off";
+  para()
 }
 
 window.openTask = openTask;
 window.editable = editable;
 window.edit = edit;
 window.complete = complete;
+window.undo = undo;
+window.trash = trash;
 
 // --------------------dashboard count-------------------
 let taskList = document.getElementById("all");
@@ -160,14 +200,22 @@ function para() {
   const allTasks = document.querySelectorAll("#all > .task");
   const counts = {};
 
-  allTasks.forEach(task => {
+  allTasks.forEach((task) => {
     const name = task.dataset.name;
     counts[name] = (counts[name] || 0) + 1;
   });
 
   const counters = document.querySelectorAll(".count");
-  counters.forEach(counter => {
+  counters.forEach((counter) => {
     const name = counter.dataset.name;
     counter.textContent = counts[name] || 0;
   });
+}
+// -------------------------------------------
+function checkerAll(tag) {
+  if (document.querySelector(`#${tag}>div`)) {
+    document.querySelector(`#${tag}>span`).classList.add("hidden");
+  } else {
+    document.querySelector(`#${tag}>span`).classList.remove("hidden");
+  }
 }
