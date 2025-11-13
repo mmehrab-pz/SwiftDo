@@ -1,6 +1,4 @@
-import {
-  category
-} from "./svg.js";
+import { category } from "./svg.js";
 
 // --------------------task page routing-------------------
 const myList = document.querySelectorAll("#myList>li");
@@ -126,7 +124,10 @@ function taskGen() {
     if (name == taskCategory) {
       const clone = task.cloneNode(true);
       clone.setAttribute("onclick", "openTask(this)");
-      if (item.firstElementChild && item.firstElementChild.tagName.toLowerCase() === 'span') {
+      if (
+        item.firstElementChild &&
+        item.firstElementChild.tagName.toLowerCase() === "span"
+      ) {
         item.innerHTML = "";
       }
       item.appendChild(clone);
@@ -140,6 +141,7 @@ function taskGen() {
       });
     }
   });
+  para();
 }
 
 function openTask(item) {
@@ -156,3 +158,19 @@ function openTask(item) {
   }
 }
 window.openTask = openTask;
+
+// --------------------dashboard count-------------------
+let taskItem = document.querySelectorAll("#taskPages>div");
+const count = document.querySelectorAll(".count");
+
+function para() {
+  taskItem.forEach((item) => {
+    const div = item.querySelectorAll(":scope > div");
+    console.log(item.dataset.name + ":" + div.length);
+    count.forEach((counter) => {
+      if(counter.dataset.name == item.dataset.name){
+        counter.innerHTML = div.length
+      }
+    });
+  });
+}
