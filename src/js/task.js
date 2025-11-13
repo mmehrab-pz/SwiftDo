@@ -1,4 +1,6 @@
-import { category } from "./svg.js";
+import {
+  category
+} from "./svg.js";
 
 // --------------------task page routing-------------------
 const myList = document.querySelectorAll("#myList>li");
@@ -104,6 +106,9 @@ function taskGen() {
                         </div>
                     </div>
     `;
+  if (document.querySelector("#all>span")) {
+    document.getElementById("all").innerHTML = "";
+  }
   document.getElementById("all").appendChild(task);
   let boxHeight = "";
   requestAnimationFrame(() => {
@@ -121,6 +126,9 @@ function taskGen() {
     if (name == taskCategory) {
       const clone = task.cloneNode(true);
       clone.setAttribute("onclick", "openTask(this)");
+      if (item.firstElementChild && item.firstElementChild.tagName.toLowerCase() === 'span') {
+        item.innerHTML = "";
+      }
       item.appendChild(clone);
 
       requestAnimationFrame(() => {
