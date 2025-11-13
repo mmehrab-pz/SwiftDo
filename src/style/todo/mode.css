@@ -137,11 +137,6 @@ body.color1 {
     }
 }
 
-.active-list {
-    height: 208px;
-    padding-inline: 40px;
-    padding-top: 12px;
-}
 
 .active-task {
     border-radius: 4px 4px 0 0 !important;
@@ -159,8 +154,12 @@ body.color1 {
                         opacity: 1 !important;
                         visibility: visible !important;
                     }
-
                     &:nth-of-type(3) {
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+
+                    &:nth-of-type(4) {
                         opacity: 1 !important;
                         visibility: visible !important;
                     }
@@ -199,3 +198,6 @@ body.color1 {
     /* خوانایی بهتر */
 }
 
+.boorder{
+    border: 2px solid aqua;
+}

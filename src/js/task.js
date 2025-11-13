@@ -5,31 +5,6 @@ const myList = document.querySelectorAll("#myList>li");
 const taskPages = document.querySelectorAll("#taskPages>div");
 const formTask = document.getElementById("formTask");
 
-myList.forEach((item) => {
-  item.addEventListener("click", () => {
-    document.getElementById(
-      "listHead"
-    ).innerText = `my list | ${item.innerText}`;
-    myList.forEach((item) => {
-      item.classList.remove("active-task-li");
-    });
-    let name = item.dataset.name;
-    item.classList.add("active-task-li");
-    taskPages.forEach((page) => {
-      page.classList.add("hidden");
-      if (page.dataset.name == name) {
-        page.classList.remove("hidden");
-        formTask.classList.remove("h-[382px]");
-        formTask.classList.add("h-0");
-      }
-      if (page.dataset.name == "all") {
-        formTask.classList.remove("h-0");
-        formTask.classList.add("h-[382px]");
-      }
-    });
-  });
-});
-
 // ---------------------------------------
 const taskGenBtn = document.getElementById("taskGenBtn");
 let taskTitle = "";
@@ -63,23 +38,28 @@ function taskGen() {
   task.classList.add("task");
   task.setAttribute("onclick", "openTask(this)");
   task.setAttribute("data-status", "off");
+  task.setAttribute("data-name", taskCategory);
   task.innerHTML = `
                     <div class="flex h-20 w-full">
-                        <figure class="h-full w-[100px] bg-[${taskColor}] flex justify-center items-center">${taskIcon}</figure>
-                        <div class="h-full w-[calc(100%-100px)] flex items-center justify-between pl-5 pr-3">
+                          <figure class="h-full w-[100px] bg-[${taskColor}] flex justify-center items-center">${taskIcon}</figure>
+                          <div class="h-full w-[calc(100%-100px)] flex items-center justify-between pl-5 pr-3">
                             <h3 class="capitalize font-['400'] text-(--txt-color) text-[20px]">${taskTitle}</h3>
                             <div class="flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                <svg data-status='off' onclick="editable(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
                                     class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                     d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                                 </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                <svg onclick="complete(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
                                     class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+                                    class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible hidden">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                                 </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
@@ -94,12 +74,12 @@ function taskGen() {
                                     d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                             </div>
-                        </div>
-                    </div>
+                          </div>
+                      </div>
                     <div class="dec w-full bg-[${taskColor}] rounded-b-sm duration-300 h-auto overflow-hidden transition-[height]">
                         <div class="w-full h-auto p-4">
                             <div class="w-full h-auto bg-[#00000036] rounded-sm p-2.5">
-                                <p class="font-['400'] text-white text-[14px] whitespace-pre-wrap desc">${taskDescription}</p>
+                                <p onclick="edit(event,this)" class="font-['400'] text-white text-[14px] outline-0 whitespace-pre-wrap desc">${taskDescription}</p>
                             </div>
                         </div>
                     </div>
@@ -115,35 +95,13 @@ function taskGen() {
       boxHeight = descBox.scrollHeight;
       console.log(boxHeight);
       descBox.style.height = "0px";
-      descBox.dataset.height = boxHeight; // برای حالت بسته اولیه
+      descBox.dataset.height = boxHeight;
     }
   });
 
-  taskPages.forEach((item) => {
-    let name = item.dataset.name;
-    if (name == taskCategory) {
-      const clone = task.cloneNode(true);
-      clone.setAttribute("onclick", "openTask(this)");
-      if (
-        item.firstElementChild &&
-        item.firstElementChild.tagName.toLowerCase() === "span"
-      ) {
-        item.innerHTML = "";
-      }
-      item.appendChild(clone);
-
-      requestAnimationFrame(() => {
-        const descBox = clone.lastElementChild;
-        if (descBox) {
-          descBox.style.height = "0px";
-          descBox.dataset.height = boxHeight;
-        }
-      });
-    }
-  });
   para();
 }
-
+// ---------open
 function openTask(item) {
   let status = item.dataset.status;
   if (status == "off") {
@@ -157,20 +115,59 @@ function openTask(item) {
     item.dataset.status = "off";
   }
 }
+// ---------edit
+function editable(item, e) {
+  e.stopPropagation();
+  let status = item.dataset.status;
+  let p =
+    item.parentElement.parentElement.parentElement.nextElementSibling
+      .firstElementChild.firstElementChild.firstElementChild;
+  if (status == "off") {
+    p.contentEditable = true;
+    p.parentElement.classList.add("boorder");
+    item.dataset.status = "on";
+  } else {
+    p.contentEditable = false;
+    p.parentElement.classList.remove("boorder");
+    item.dataset.status = "off";
+  }
+  item.classList.toggle("text-(--txt-color)");
+}
+function edit(e, item) {
+  e.stopPropagation();
+}
+// ---------completed
+function complete(item, e) {
+  e.stopPropagation();
+  const task = item.closest(".task");
+  task.remove();
+  const completedBox = document.getElementById("completedBox");
+  completedBox.appendChild(task);
+  item.classList.add("hidden");
+  item.nextElementSibling.classList.remove("hidden");
+}
+
 window.openTask = openTask;
+window.editable = editable;
+window.edit = edit;
+window.complete = complete;
 
 // --------------------dashboard count-------------------
-let taskItem = document.querySelectorAll("#taskPages>div");
+let taskList = document.getElementById("all");
 const count = document.querySelectorAll(".count");
 
 function para() {
-  taskItem.forEach((item) => {
-    const div = item.querySelectorAll(":scope > div");
-    console.log(item.dataset.name + ":" + div.length);
-    count.forEach((counter) => {
-      if(counter.dataset.name == item.dataset.name){
-        counter.innerHTML = div.length
-      }
-    });
+  const allTasks = document.querySelectorAll("#all > .task");
+  const counts = {};
+
+  allTasks.forEach(task => {
+    const name = task.dataset.name;
+    counts[name] = (counts[name] || 0) + 1;
+  });
+
+  const counters = document.querySelectorAll(".count");
+  counters.forEach(counter => {
+    const name = counter.dataset.name;
+    counter.textContent = counts[name] || 0;
   });
 }
