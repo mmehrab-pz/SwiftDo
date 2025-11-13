@@ -196,9 +196,6 @@
   .invisible {
     visibility: hidden;
   }
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
@@ -432,6 +429,9 @@
   .h-\[270px\] {
     height: 270px;
   }
+  .h-\[382px\] {
+    height: 382px;
+  }
   .h-\[calc\(100\%-70px\)\] {
     height: calc(100% - 70px);
   }
@@ -512,13 +512,6 @@
   }
   .border-collapse {
     border-collapse: collapse;
-  }
-  .origin-top {
-    transform-origin: top;
-  }
-  .scale-y-0 {
-    --tw-scale-y: 0%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -694,9 +687,6 @@
   }
   .bg-\[white\] {
     background-color: white;
-  }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
   }
   .bg-pink {
     background-color: var(--color-pink);
@@ -895,9 +885,6 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .break-words {
-    overflow-wrap: break-word;
-  }
   .whitespace-pre-wrap {
     white-space: pre-wrap;
   }
@@ -1012,11 +999,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       outline-color: color-mix(in oklab, var(--color-white) 10%, transparent);
     }
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-\[height\] {
     transition-property: height;
@@ -1258,21 +1240,6 @@
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   }
 }
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -1389,9 +1356,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;

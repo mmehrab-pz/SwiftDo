@@ -3,6 +3,7 @@ import { category } from "./svg.js";
 // --------------------task page routing-------------------
 const myList = document.querySelectorAll("#myList>li");
 const taskPages = document.querySelectorAll("#taskPages>div");
+const formTask = document.getElementById("formTask");
 
 myList.forEach((item) => {
   item.addEventListener("click", () => {
@@ -18,6 +19,12 @@ myList.forEach((item) => {
       page.classList.add("hidden");
       if (page.dataset.name == name) {
         page.classList.remove("hidden");
+        formTask.classList.remove("h-[382px]");
+        formTask.classList.add("h-0");
+      }
+      if (page.dataset.name == "all") {
+        formTask.classList.remove("h-0");
+        formTask.classList.add("h-[382px]");
       }
     });
   });
@@ -55,6 +62,7 @@ function taskGen() {
   const task = document.createElement("div");
   task.classList.add("task");
   task.setAttribute("onclick", "openTask(this)");
+  task.setAttribute("data-status", "off");
   task.innerHTML = `
                     <div class="flex h-20 w-full">
                         <figure class="h-full w-[100px] bg-[${taskColor}] flex justify-center items-center">${taskIcon}</figure>
@@ -88,27 +96,55 @@ function taskGen() {
                             </div>
                         </div>
                     </div>
-                    <div class="w-full bg-[${taskColor}] rounded-b-sm duration-300 h-0 overflow-hidden transition-[height] desc-wrap">
-                        <div class="inner-wrap w-full h-auto p-4">
+                    <div class="dec w-full bg-[${taskColor}] rounded-b-sm duration-300 h-auto overflow-hidden transition-[height]">
+                        <div class="w-full h-auto p-4">
                             <div class="w-full h-auto bg-[#00000036] rounded-sm p-2.5">
-                                <p class="font-['400'] text-white text-[14px] desc whitespace-pre-wrap">${taskDescription}</p>
+                                <p class="font-['400'] text-white text-[14px] whitespace-pre-wrap desc">${taskDescription}</p>
                             </div>
                         </div>
                     </div>
     `;
-    document.getElementById("all").appendChild(task);
+  document.getElementById("all").appendChild(task);
+  let boxHeight = "";
+  requestAnimationFrame(() => {
+    const descBox = task.querySelector(`.dec`);
+    if (descBox) {
+      boxHeight = descBox.scrollHeight;
+      console.log(boxHeight);
+      descBox.style.height = "0px";
+      descBox.dataset.height = boxHeight; // برای حالت بسته اولیه
+    }
+  });
 
-    taskPages.forEach((item) => {
-      let name = item.dataset.name;
-      if (name == taskCategory) {
-        item.appendChild(task.cloneNode(true));
-      }
-    });
+  taskPages.forEach((item) => {
+    let name = item.dataset.name;
+    if (name == taskCategory) {
+      const clone = task.cloneNode(true);
+      clone.setAttribute("onclick", "openTask(this)");
+      item.appendChild(clone);
 
+      requestAnimationFrame(() => {
+        const descBox = clone.lastElementChild;
+        if (descBox) {
+          descBox.style.height = "0px";
+          descBox.dataset.height = boxHeight;
+        }
+      });
+    }
+  });
 }
 
- function openTask(item) {
- }
- window.openTask = openTask;
-
-
+function openTask(item) {
+  let status = item.dataset.status;
+  if (status == "off") {
+    item.classList.add("active-task");
+    item.lastElementChild.style.height =
+      item.lastElementChild.dataset.height + "px";
+    item.dataset.status = "on";
+  } else {
+    item.classList.remove("active-task");
+    item.lastElementChild.style.height = "0px";
+    item.dataset.status = "off";
+  }
+}
+window.openTask = openTask;
