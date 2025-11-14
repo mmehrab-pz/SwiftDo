@@ -9,9 +9,13 @@ const pages = document.querySelectorAll(".page");
         item.lastElementChild.classList.remove('active-list')
     })
      item.classList.add('nav-active')
-      if(name == 'list'){
-         item.lastElementChild.classList.toggle('active-list')
-        }
+     console.log(item);
+     
+       if(name == 'list'){
+          document.getElementById('list').classList.add('nav-active')
+         } else if(name == 'profile'){
+          document.getElementById('profile').classList.add('nav-active')
+         }
      pages.forEach((page) => {
        page.classList.add("hidden");
        if (name == page.dataset.name) {

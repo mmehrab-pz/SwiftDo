@@ -101,7 +101,7 @@
                     <h2 class="text-[13px] capitalize font-['400'] text-(--aside-txt-color) ml-3">dashboard</h2>
                 </li>
                 <!-- -------my list -->
-                <li data-name="list" class="para navbar px-5 py-3 flex items-center justify-between cursor-pointer group">
+                <li data-name="list" id="list" class="para navbar px-5 py-3 flex items-center justify-between cursor-pointer group">
                     <div class="flex">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             class="size-5 text-(--aside-icon-color) duration-300 group-hover:text-(--aside-item-act-color)">
@@ -152,7 +152,7 @@
                         class="flex justify-center items-center min-w-5 h-5 px-1 duration-300 rounded-sm bg-(--bg-color-two) group-hover:text-(--aside-item-act-color) text-[12px] text-(--aside-txt-color) font-['400']">0</span>
                 </li>
                 <!-- -------profile -->
-                <li data-name="profile"
+                <li data-name="profile" id="profile"
                     class="navbar px-5 py-3 flex items-center cursor-pointer hover:*:text-(--aside-item-act-color) *:duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="size-5 text-(--aside-icon-color)">
@@ -443,7 +443,7 @@
         <section class="w-full h-[calc(100%-70px)] mt-[70px] bg-(--bg-color-two) relative">
             <!-- ----------dashboard -->
             <section data-name="dashboard"
-                class="page w-full h-full px-6 pb-6 absolute top-0 left-0 z-50 scrollHide hidden">
+                class="page w-full h-full px-6 pb-6 absolute top-0 left-0 z-50 scrollHide">
                 <h2 class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">dashboard
                 </h2>
                 <div class="w-full flex flex-wrap">
@@ -467,8 +467,8 @@
                                     <p class="text-[13px] font-['300'] text-(--txt-color2)">All your work tasks are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -501,8 +501,8 @@
                                         Finance tasks are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -536,8 +536,8 @@
                                         are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -571,8 +571,8 @@
                                         are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -606,8 +606,8 @@
                                         are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -641,8 +641,8 @@
                                         are here
                                         — click the button to view them.</p>
                                 </div>
-                                <span
-                                    class="py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
+                                <span data-name="list"
+                                    class="navbar py-1 px-2 bg-[#556ee6] rounded-sm text-[11px] capitalize font-['400'] text-white cursor-pointer flex items-center">
                                     view list
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5 ml-1.5">
@@ -657,7 +657,7 @@
                 </div>
             </section>
             <!-- ----------my list -->
-            <section data-name="list" class="page w-full px-6 pb-6 h-full absolute top-0 left-0 z-50 scrollHide">
+            <section data-name="list" class="page w-full px-6 pb-6 h-full absolute top-0 left-0 z-50 scrollHide hidden">
                 <h2 id="listHead"
                     class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">my list |
                     all</h2>
