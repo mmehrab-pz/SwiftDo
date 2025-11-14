@@ -44,7 +44,7 @@ body.dark {
     --txt-color: white;
     /* ---------- */
     --txt-color2: #c3cbe4;
-    
+
     --bg-header: #262B3C;
 
 }
@@ -213,4 +213,19 @@ body.color1 {
 
 .boorder {
     border: 2px solid aqua;
+}
+
+/* ---------------------------- */
+.FAQ-list-active {
+    background-color: #556EE6 !important;
+
+    &:hover {
+        >svg {
+            color: white !important;
+        }
+
+        >h3 {
+            color: white !important;
+        }
+    }
 }
