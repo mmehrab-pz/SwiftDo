@@ -93,23 +93,19 @@ body.color1 {
                     }
                 }
 
-                &:nth-of-type(2) {
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
                     >div {
-                        >div {
-                            >h2 {
-                                display: none !important;
-                                margin-left: 0 !important;
-                            }
-                        }
-
-                        >svg {
+                        >h2 {
                             display: none !important;
+                            margin-left: 0 !important;
                         }
                     }
-
-                    >ul {
+                    >span{
                         display: none !important;
                     }
+
                 }
             }
         }
