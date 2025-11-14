@@ -127,13 +127,18 @@ body.color1 {
         color: var(--aside-item-act-color) !important;
     }
 
-    >div>div>* {
-        color: var(--aside-item-act-color) !important;
+    >div {
+        >svg {
+            color: var(--aside-item-act-color) !important;
+        }
+
+        >h2 {
+            color: var(--aside-item-act-color) !important;
+        }
     }
 
-    >div>svg {
+    >span {
         color: var(--aside-item-act-color) !important;
-        transform: rotate(-180deg) !important;
     }
 }
 
@@ -154,6 +159,7 @@ body.color1 {
                         opacity: 1 !important;
                         visibility: visible !important;
                     }
+
                     &:nth-of-type(3) {
                         opacity: 1 !important;
                         visibility: visible !important;
@@ -163,6 +169,7 @@ body.color1 {
                         opacity: 1 !important;
                         visibility: visible !important;
                     }
+
                     &:nth-of-type(5) {
                         opacity: 1 !important;
                         visibility: visible !important;
@@ -202,6 +209,6 @@ body.color1 {
     /* خوانایی بهتر */
 }
 
-.boorder{
+.boorder {
     border: 2px solid aqua;
 }
