@@ -19,6 +19,7 @@
     --txt-color: #343a40;
     /* ---------- */
     --txt-color2: #74788d;
+    --bg-header: #ffffff;
 
 }
 
@@ -32,7 +33,7 @@ body.dark {
     --header-item-color: #a6b0cf;
     --header-text-color: #a6b0cf;
     --header-search-text: white;
-    --header-search-bg: #262B3C;
+    --header-search-bg: #2A3042;
     --secondary-text-color: white;
     /* ---------- */
     --search-h1-color: #f6f6f6;
@@ -43,7 +44,8 @@ body.dark {
     --txt-color: white;
     /* ---------- */
     --txt-color2: #c3cbe4;
-
+    
+    --bg-header: #262B3C;
 
 }
 
