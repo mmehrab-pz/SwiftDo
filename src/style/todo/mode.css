@@ -163,6 +163,10 @@ body.color1 {
                         opacity: 1 !important;
                         visibility: visible !important;
                     }
+                    &:nth-of-type(5) {
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
                 }
             }
         }

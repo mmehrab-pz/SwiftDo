@@ -53,17 +53,23 @@ function taskGen() {
                                 </svg>
                                 <svg onclick="complete(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible">
+                                    class="complete size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                                  <svg onclick="undo(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-                                    class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible hidden">
+                                    class="undo size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-1.5 opacity-0 invisible hidden">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                                 </svg>
                                 <svg onclick="trash(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
-                                    class="size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-4 opacity-0 invisible">
+                                    class="trash size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-4 opacity-0 invisible">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                </svg>
+                                <svg onclick="_delete(this,event)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="delete size-6 text-(--aside-icon-color) hover:text-(--aside-logo-color) duration-200 mr-4 opacity-0 invisible hidden">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                     d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                                 </svg>
@@ -144,30 +150,35 @@ function complete(item, e) {
   completedBox.appendChild(task);
   checkerAll("all");
   checkerAll("completedBox");
+  checkerAll("trashBox");
   item.classList.add("hidden");
-  item.nextElementSibling.classList.remove("hidden");
+  item.parentElement.querySelector(".undo").classList.remove("hidden");
 
   task.classList.remove("active-task");
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
-  para()
+  para();
 }
-// ---------delete
-function trash(item,e){
+// ---------trash
+function trash(item, e) {
   e.stopPropagation();
   const task = item.closest(".task");
   task.remove();
   const trashBox = document.getElementById("trashBox");
   trashBox.appendChild(task);
   checkerAll("all");
+  checkerAll("completedBox");
   checkerAll("trashBox");
   item.classList.add("hidden");
-  item.nextElementSibling.classList.remove("hidden");
+
+  item.parentElement.querySelector(".undo").classList.remove("hidden");
+  item.parentElement.querySelector(".delete").classList.remove("hidden");
+  item.parentElement.querySelector(".complete").classList.add("hidden");
 
   task.classList.remove("active-task");
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
-  para()
+  para();
 }
 // ---------undo
 function undo(item, e) {
@@ -177,12 +188,25 @@ function undo(item, e) {
   checkerAll("completedBox");
   taskList.appendChild(task);
   checkerAll("all");
-    item.classList.add("hidden");
-  item.previousElementSibling.classList.remove("hidden");
+  checkerAll("trashBox");
+  item.classList.add("hidden");
+
+  item.parentElement.querySelector(".complete").classList.remove("hidden");
+  item.parentElement.querySelector(".trash").classList.remove("hidden");
+  item.parentElement.querySelector(".delete").classList.add("hidden");
+  item.parentElement.querySelector(".undo").classList.add("hidden");
+
   task.classList.remove("active-task");
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
-  para()
+  para();
+}
+// ---------delete
+function _delete(item,e){
+  e.stopPropagation();
+  const task = item.closest(".task");
+  task.remove();
+  checkerAll("trashBox");
 }
 
 window.openTask = openTask;
@@ -191,6 +215,7 @@ window.edit = edit;
 window.complete = complete;
 window.undo = undo;
 window.trash = trash;
+window._delete = _delete;
 
 // --------------------dashboard count-------------------
 let taskList = document.getElementById("all");
