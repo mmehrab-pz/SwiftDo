@@ -93,6 +93,7 @@ function taskGen() {
 
   document.getElementById("all").appendChild(task);
   checkerAll("all");
+  checkLength();
   let boxHeight = "";
   requestAnimationFrame(() => {
     const descBox = task.querySelector(`.dec`);
@@ -158,6 +159,7 @@ function complete(item, e) {
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
   para();
+  checkLength();
 }
 // ---------trash
 function trash(item, e) {
@@ -179,6 +181,7 @@ function trash(item, e) {
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
   para();
+  checkLength();
 }
 // ---------undo
 function undo(item, e) {
@@ -200,13 +203,15 @@ function undo(item, e) {
   task.lastElementChild.style.height = "0px";
   task.dataset.status = "off";
   para();
+  checkLength();
 }
 // ---------delete
-function _delete(item,e){
+function _delete(item, e) {
   e.stopPropagation();
   const task = item.closest(".task");
   task.remove();
   checkerAll("trashBox");
+  checkLength();
 }
 
 window.openTask = openTask;
@@ -243,4 +248,16 @@ function checkerAll(tag) {
   } else {
     document.querySelector(`#${tag}>span`).classList.remove("hidden");
   }
+}
+
+function checkLength() {
+  document.querySelectorAll(".lara").forEach((list) => {
+    console.log(list.querySelectorAll(":scope>div").length);
+    document.querySelectorAll(".para").forEach((item) => {
+      if (item.dataset.name == list.dataset.role) {
+        item.lastElementChild.innerText =
+          list.querySelectorAll(":scope>div").length;
+      }
+    });
+  });
 }
