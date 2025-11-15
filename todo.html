@@ -12,8 +12,7 @@
 
 <body class="w-vh h-dvh flex overflow-hidden select-none">
     <!-- -------------------------------------setting box---------------------------------- -->
-    <section id="settingBox"
-        class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[-280px] duration-200 z-100">
+    <section id="settingBox" class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[0px] duration-200 z-100">
         <header
             class="w-full px-4 h-[70px] flex items-center justify-between border-b border-b-(--search-border-color)">
             <h2 class="capitalize text-[16px] font-['500'] text-(--search-h1-color)">settings</h2>
@@ -110,20 +109,47 @@
                     </span>
                 </div>
             </div>
-        </div>
+            <!-- -------left sidebar bg pattern -->
+            <div class="w-full pt-1 pb-[15px] mt-3">
+                <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar background pattern
+                </h3>
+                <div class="w-full mt-2 flex gap-2.5">
+                    <span data-url="url(../../asset/img/pat1.png)" class="pattern w-10 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span
+                            class="w-full h-full bg-[url(../../asset/img/pat1.png)] bg-cover"></span>
+                    </span>
+                    <span data-url="url(../../asset/img/pat2.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span
+                            class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat2.png)] bg-cover left-0 z-1"></span>
+                    </span>
+                    <span data-url="url(../../asset/img/pat3.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span
+                            class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat3.png)] bg-cover left-0 z-1"></span>
+                    </span>
+                    <span data-url="url(../../asset/img/pat4.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span
+                            class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat4.png)] bg-cover left-0 z-1"></span>
+                    </span>
+                    <span data-url="" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span
+                            class="w-full h-full absolute top-0 bg-cover left-0 z-1"></span>
+                    </span>
+                </div>
+            </div>
     </section>
     <!-- -------------------------------------Curtain---------------------------------- -->
     <span id="curtain" class="w-full h-full absolute z-90 top-0 left-0 bg-[#343a408c] hidden"></span>
     <!-- -------------------------------------aside---------------------------------- -->
     <aside id="aside" data-status="off"
-        class="hidden md:inline h-full w-[250px] bg-(image:--bg-aside) bg-(--bg-aside) nav-bg1">
-        <header class="w-full h-[70px]">
+        class="hidden md:inline h-full w-[250px] bg-(image:--bg-aside) bg-(--bg-aside) nav-bg1 relative">
+        <span id="asidePat" class="w-full h-full absolute top-0 left-0 z-1 opacity-10"></span>
+        <header class="w-full h-[70px] relative z-5">
             <figure class="w-full h-full flex justify-center items-center">
                 <img src="src/asset/img/logo3.png" alt="logo" class="w-[30px] mr-2">
                 <figcaption class="text-(--logo-color) font-['600'] text-[18px]">SwiftDo</figcaption>
             </figure>
         </header>
-        <nav class="w-fill mt-2.5 mb-[30px]">
+        <nav class="w-fill mt-2.5 mb-[30px] relative z-5">
             <ul class="w-full">
                 <!-- -------dashboard -->
                 <li data-name="dashboard"

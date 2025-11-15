@@ -129,7 +129,7 @@ document.addEventListener("click", (e) => {
     item.lastElementChild.classList.add("hidden");
   });
 });
-// ------------------change aside btn--------------------
+// ------------------change aside color--------------------
 const asideMode = document.querySelectorAll(".aside-mode");
 let mode = "";
 
@@ -161,5 +161,69 @@ window.addEventListener("DOMContentLoaded", () => {
   const savedMode = localStorage.getItem("aside-mode");
   if (savedMode) {
     setMode(savedMode);
+  }
+});
+// ------------------change aside pattern--------------------
+// const pattern = document.querySelectorAll(".pattern");
+// const asidePat = document.getElementById("asidePat");
+// let url = "";
+
+// pattern.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     if (url) {
+//       asidePat.classList.remove(`bg-[${url}]`);
+//     }
+//     pattern.forEach((item) =>
+//       item.classList.remove("outline-2", "outline-[#556ee6]")
+//     );
+//     item.classList.add("outline-2", "outline-[#556ee6]");
+//     url = item.dataset.url;
+//     asidePat.classList.add(`bg-[${url}]`);
+//   });
+// });
+
+const pattern = document.querySelectorAll(".pattern");
+const asidePat = document.getElementById("asidePat");
+let url = "";
+
+// تابع برای اعمال pattern جدید
+function setPattern(newUrl) {
+  // حذف pattern قبلی از کلاس
+  if (url) {
+    asidePat.classList.remove(`bg-[${url}]`);
+  }
+
+  // حذف outline از همه patternها
+  pattern.forEach(item =>
+    item.classList.remove("outline-2", "outline-[#556ee6]")
+  );
+
+  // افزودن outline به pattern فعال
+  const activeItem = [...pattern].find(item => item.dataset.url === newUrl);
+  if (activeItem) {
+    activeItem.classList.add("outline-2", "outline-[#556ee6]");
+  }
+
+  // افزودن background جدید
+  asidePat.classList.add(`bg-[${newUrl}]`);
+  url = newUrl;
+
+  // ذخیره در localStorage
+  localStorage.setItem("aside-pattern", newUrl);
+}
+
+// رویداد کلیک برای انتخاب pattern
+pattern.forEach(item => {
+  item.addEventListener("click", () => {
+    const newUrl = item.dataset.url;
+    setPattern(newUrl);
+  });
+});
+
+// بازیابی pattern ذخیره‌شده در بارگذاری صفحه
+window.addEventListener("DOMContentLoaded", () => {
+  const savedUrl = localStorage.getItem("aside-pattern");
+  if (savedUrl) {
+    setPattern(savedUrl);
   }
 });
