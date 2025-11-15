@@ -192,3 +192,16 @@
                                     </div>
                                 </div>
                             </div>
+
+                                            <footer class="w-full h-[60px] bg-(--bg-header) flex items-center justify-between px-[18px] py-5">
+                    <p class="text-[13px] font-['400'] text-(--txt-color2)">2025 © SwiftDo.</p>
+                    <p class="text-[13px] font-['400'] text-(--txt-color2)">
+                        Design & Develop by
+                        <a href="https://pourzakaria.com/" target="_blank"
+                            class="hover:text-(--txt-color) duration-300">Mehrab Pourzakaria</a>
+                    </p>
+                </footer>
+
+
+
+                class="w-full h-[calc(100%-60px)] px-6 pb-6 scrollHide
