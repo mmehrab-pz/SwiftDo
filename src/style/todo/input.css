@@ -84,7 +84,7 @@
 
 @layer components {
     .spin {
-        animation: spin 3s linear infinite;
+        animation: spin 2s linear infinite;
     }
 
     .tada {
