@@ -110,6 +110,14 @@
         background-color: hsla(209, 100%, 39%, 1);
         background-image: radial-gradient(at 80% 100%, hsla(209, 96%, 59%, 1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(209, 68%, 61%, 1) 0px, transparent 50%);
     }
+    .bg5 {
+        background-color: rgb(59, 25, 3);
+        background-image: radial-gradient(at 80% 100%, rgb(126, 79, 19) 0px, transparent 50%), radial-gradient(at 0% 0%, rgb(107, 74, 25) 0px, transparent 50%);
+    }
+    .bg6 {
+        background-color: rgb(11, 32, 78);
+        background-image: radial-gradient(at 80% 100%, rgb(40, 121, 146) 0px, transparent 50%), radial-gradient(at 0% 0%, rgb(74, 140, 170) 0px, transparent 50%);
+    }
 
 }
 
