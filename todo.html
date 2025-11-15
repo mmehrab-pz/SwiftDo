@@ -695,7 +695,7 @@
                                     category</h3>
                                 <div class="mt-2 grid grid-cols-1 h-10 mb-2.5">
                                     <select id="taskCategory"
-                                        class="col-start-1 row-start-1 w-full appearance-none cursor-pointer rounded-md bg-(--bg-color-two) font-['400'] py-1.5 pr-8 pl-3 text-base text-(--txt-color) outline-1 -outline-offset-1 outline-white/10 *:bg-gray-800 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+                                        class="col-start-1 row-start-1 w-full appearance-none cursor-pointer rounded-md bg-(--bg-color-two) font-['400'] py-1.5 pr-8 pl-3 text-base text-(--txt-color) outline-1 -outline-offset-1 outline-white/10 *:bg-(--bg-color-two) focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
                                         <option value="" disabled selected>choose a category</option>
                                         <option value="work">work</option>
                                         <option value="shopping">shopping / finance</option>
@@ -800,14 +800,14 @@
                 </div>
             </section>
             <!-- -----------------------------------------------------------------------------------------------profile -->
-            <section data-name="profile" class="page w-full h-full absolute top-0 left-0 z-50 hidden">
+            <section data-name="profile" class="page w-full h-full absolute top-0 left-0 z-50">
                 <div class="w-full h-[calc(100%-60px)] px-6 pb-6 scrollHide">
                     <h2 class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">
                         profile
                     </h2>
-                    <div class="w-full h-[calc(100%-70px)]  scrollHide flex flex-wrap">
-                        <div class="w-full lg:w-[30%] p-2.5 ">
-                            <div class="w-full h-auto bg-(--bg-color-one) rounded-sm p-2.5 pb-5">
+                    <div class="w-full h-auto scrollHide flex flex-wrap">
+                        <div class="w-full h-auto lg:w-[30%] p-2.5 ">
+                            <div class="w-full h-full bg-(--bg-color-one) rounded-sm p-5">
                                 <!-- ------img -->
                                 <div class="w-full flex justify-center lg:justify-start">
                                     <figure class="w-[100px] h-[100px] rounded-full overflow-hidden">
@@ -871,85 +871,108 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full lg:w-[70%] p-2.5">
-                            <div class="w-full h-auto bg-(--bg-color-one) rounded-sm p-2.5 pb-5">
-                                <h2 class="text-[15px] font-['400'] flex items-center text-(--txt-color) capitalize">
-                                    edit your info
-                                </h2>
-                                <div class="w-full mt-10">
-                                    <div class="w-full flex flex-wrap">
-                                        <!-- ----Fname -->
-                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
-                                                name</label>
-                                            <div class="mt-2">
-                                                <input type="text" name="first-name" value="mehrab"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                        <div class="w-full h-auto lg:w-[70%]">
+                            <div class="w-full p-2.5">
+                                <div class="w-full h-auto bg-(--bg-color-one) rounded-sm p-5 ">
+                                    <h2
+                                        class="text-[15px] font-['400'] flex items-center text-(--txt-color) capitalize">
+                                        edit your info
+                                    </h2>
+                                    <div class="w-full mt-8">
+                                        <div class="w-full flex flex-wrap">
+                                            <!-- ----Fname -->
+                                            <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
+                                                    name</label>
+                                                <div class="mt-2">
+                                                    <input type="text" name="first-name" value="mehrab"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
+                                            </div>
+                                            <!-- ----Lname -->
+                                            <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
+                                                    name</label>
+                                                <div class="mt-2">
+                                                    <input type="text" name="first-name" value="pourzakaria"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- ----Lname -->
-                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
-                                                name</label>
-                                            <div class="mt-2">
-                                                <input type="text" name="first-name" value="pourzakaria"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                        <div class="w-full flex flex-wrap mt-5">
+                                            <!-- ----username -->
+                                            <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">username</label>
+                                                <div class="mt-2">
+                                                    <input type="text" name="first-name" value="mmehrab"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
                                             </div>
+                                            <!-- ----email -->
+                                            <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">email</label>
+                                                <div class="mt-2">
+                                                    <input type="text" name="first-name" value="mmehrab.pk@gmail.com"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full flex flex-wrap mt-5">
+                                            <!-- ----number -->
+                                            <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">number</label>
+                                                <div class="mt-2">
+                                                    <input type="tel" name="first-name" value="09309791544"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
+                                            </div>
+                                            <!-- ----password -->
+                                            <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                                <label
+                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">password</label>
+                                                <div class="mt-2">
+                                                    <input type="password" name="first-name" value="dasdasdasdasd"
+                                                        autocomplete="given-name"
+                                                        class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full mt-5">
+                                            <button
+                                                class="rounded-sm px-2.5 py-1.5 capitalize font-['400'] text-(--txt-color) text-[15px] bg-[#556ee6] cursor-pointer">change
+                                                data</button>
                                         </div>
                                     </div>
-                                    <div class="w-full flex flex-wrap mt-5">
-                                        <!-- ----username -->
-                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">username</label>
-                                            <div class="mt-2">
-                                                <input type="text" name="first-name" value="mmehrab"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
-                                            </div>
-                                        </div>
-                                        <!-- ----email -->
-                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">email</label>
-                                            <div class="mt-2">
-                                                <input type="text" name="first-name" value="mmehrab.pk@gmail.com"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-full flex flex-wrap mt-5">
-                                        <!-- ----number -->
-                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">number</label>
-                                            <div class="mt-2">
-                                                <input type="tel" name="first-name" value="09309791544"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
-                                            </div>
-                                        </div>
-                                        <!-- ----password -->
-                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
-                                            <label
-                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">password</label>
-                                            <div class="mt-2">
-                                                <input type="password" name="first-name" value="dasdasdasdasd"
-                                                    autocomplete="given-name"
-                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-full mt-5">
-                                        <button
-                                            class="rounded-sm px-2.5 py-1.5 capitalize font-['400'] text-(--txt-color) text-[15px] bg-[#556ee6] cursor-pointer">change
-                                            data</button>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full p-2.5">
+                                <div class="w-full h-auto bg-(--bg-color-one) rounded-sm p-5">
+                                    <h2 class="text-[16px] font-['500'] text-blue-700 mb-4">Account Settings</h2>
+                                    <p class="text-(--txt-color2) text-[14px] font-['400'] leading-relaxed mb-3">
+                                        In this section, you can view and update your personal account information —
+                                        including your username, display name, and contact details.
+                                        All changes you make will be saved locally on your device to ensure your privacy
+                                        and control over your data.
+                                    </p>
+                                    <p class="text-(--txt-color2) text-[14px] font-['400'] leading-relaxed mb-3">
+                                        You are free to customize your profile to match your preferences. None of your
+                                        information will be shared or uploaded anywhere — it stays safely on your
+                                        browser.
+                                    </p>
+                                    <p class="text-(--txt-color2) text-[14px] font-['400'] leading-relaxed">
+                                        Remember to double-check your updates before leaving this page, as changes take
+                                        effect immediately after saving.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1289,7 +1312,7 @@
                 </footer>
             </section>
             <!-- -----------------------------------------------------------------------------------------------------copyright -->
-            <section data-name="copyright" class="page w-full h-full absolute top-0 left-0 z-50">
+            <section data-name="copyright" class="page w-full h-full absolute top-0 left-0 z-50 hidden">
                 <div class="w-full h-[calc(100%-60px)] px-6 pb-6 scrollHide">
                     <h2 class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">
                         copyright
@@ -1297,7 +1320,7 @@
                     <div class="w-full h-[calc(100%-70px)] scrollHide">
                         <div class="w-full flex flex-wrap">
                             <div class="w-full lg:w-[30%] p-2.5 pb-0">
-                                <div class="w-full h-full rounded-sm bg-(--bg-color-one) p-2.5 flex items-center">
+                                <div class="w-full h-full rounded-sm bg-(--bg-color-one) p-5 flex items-center">
                                     <div>
                                         <figure class="w-[100px] h-[100px] rounded-full overflow-hidden">
                                             <img src="src/asset/img/mehrab.jpg" alt="">
@@ -1364,7 +1387,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full pt-5 flex">
+                        <div class="w-full pt-5 flex flex-wrap">
                             <div class="w-full lg:w-1/2 h-auto p-2.5 pt-0">
                                 <div class="w-full h-full bg-(--bg-color-one) p-5 rounded-sm">
                                     <p class="text-(--txt-color2) text-[14px] font-['400'] leading-relaxed">

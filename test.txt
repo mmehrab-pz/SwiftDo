@@ -108,3 +108,87 @@
                                     Take it, use it, make it better, and share freely.
                                 </blockquote>
                             </div>
+
+
+
+
+                                                        <div class="w-full h-auto bg-(--bg-color-one) rounded-sm p-2.5 pb-5">
+                                <h2 class="text-[15px] font-['400'] flex items-center text-(--txt-color) capitalize">
+                                    edit your info
+                                </h2>
+                                <div class="w-full mt-10">
+                                    <div class="w-full flex flex-wrap">
+                                        <!-- ----Fname -->
+                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
+                                                name</label>
+                                            <div class="mt-2">
+                                                <input type="text" name="first-name" value="mehrab"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                        <!-- ----Lname -->
+                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
+                                                name</label>
+                                            <div class="mt-2">
+                                                <input type="text" name="first-name" value="pourzakaria"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full flex flex-wrap mt-5">
+                                        <!-- ----username -->
+                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">username</label>
+                                            <div class="mt-2">
+                                                <input type="text" name="first-name" value="mmehrab"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                        <!-- ----email -->
+                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">email</label>
+                                            <div class="mt-2">
+                                                <input type="text" name="first-name" value="mmehrab.pk@gmail.com"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full flex flex-wrap mt-5">
+                                        <!-- ----number -->
+                                        <div class="w-full lg:w-1/2 lg:pr-2.5">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">number</label>
+                                            <div class="mt-2">
+                                                <input type="tel" name="first-name" value="09309791544"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                        <!-- ----password -->
+                                        <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
+                                            <label
+                                                class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">password</label>
+                                            <div class="mt-2">
+                                                <input type="password" name="first-name" value="dasdasdasdasd"
+                                                    autocomplete="given-name"
+                                                    class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full mt-5">
+                                        <button
+                                            class="rounded-sm px-2.5 py-1.5 capitalize font-['400'] text-(--txt-color) text-[15px] bg-[#556ee6] cursor-pointer">change
+                                            data</button>
+                                    </div>
+                                </div>
+                            </div>
