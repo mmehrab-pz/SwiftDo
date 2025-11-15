@@ -129,3 +129,37 @@ document.addEventListener("click", (e) => {
     item.lastElementChild.classList.add("hidden");
   });
 });
+// ------------------change aside btn--------------------
+const asideMode = document.querySelectorAll(".aside-mode");
+let mode = "";
+
+function setMode(newMode) {
+  asideMode.forEach((item) => item.classList.remove("color-active"));
+  if (mode) body.classList.remove(mode);
+
+  const activeItem = [...asideMode].find(
+    (item) => item.dataset.mode === newMode
+  );
+  if (activeItem) {
+    activeItem.classList.add("color-active");
+  }
+
+  body.classList.add(newMode);
+  mode = newMode;
+
+  localStorage.setItem("aside-mode", newMode);
+}
+
+asideMode.forEach((item) => {
+  item.addEventListener("click", () => {
+    const newMode = item.dataset.mode;
+    setMode(newMode);
+  });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedMode = localStorage.getItem("aside-mode");
+  if (savedMode) {
+    setMode(savedMode);
+  }
+});
