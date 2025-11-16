@@ -13,7 +13,8 @@
 
 <body class="w-vh h-dvh flex overflow-hidden select-none relative">
     <!-- -------------------------------------loading---------------------------------- -->
-    <span id="loader" class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center">
+    <span id="loader"
+        class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center hidden">
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
             <defs>
                 <clippath id="pencil-eraser">
@@ -536,8 +537,9 @@
                 <div class="h-full px-3 flex cursor-pointer ml-1 toka relative">
                     <figure class="flex items-center">
                         <img src="src/asset/img/mehrab.jpg" alt="" class="w-9 h-9 rounded-full">
-                        <figcaption class="text-[13px] font-['400'] text-(--header-text-color) ml-2 flex items-center">
-                            mmehrab
+                        <figcaption id="headerUsername"
+                            class="text-[13px] font-['400'] text-(--header-text-color) ml-2 flex items-center">
+
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                 class="size-4 text-(--header-text-color)] ml-1">
                                 <path fill-rule="evenodd"
@@ -607,7 +609,7 @@
         </header>
         <section class="w-full h-[calc(100%-70px)] mt-[70px] bg-(--bg-color-two) relative">
             <!-- ----------------------------------------------------------------------------------------------------------dashboard -->
-            <section data-name="dashboard" class="page w-full h-full absolute top-0 left-0 z-50 scrollHide">
+            <section data-name="dashboard" class="page w-full h-full absolute top-0 left-0 z-50 scrollHide hidden">
                 <div class="w-full h-[calc(100%-60px)] px-6 pb-6 scrollHide">
                     <h2 class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">
                         dashboard
@@ -1008,7 +1010,7 @@
                 </footer>
             </section>
             <!-- -----------------------------------------------------------------------------------------------profile -->
-            <section data-name="profile" class="page w-full h-full absolute top-0 left-0 z-50 hidden">
+            <section data-name="profile" class="page w-full h-full absolute top-0 left-0 z-50">
                 <div class="w-full h-[calc(100%-60px)] px-6 pb-6 scrollHide">
                     <h2 class="text-[16px] h-[70px] font-['600'] flex items-center text-(--txt-color) uppercase">
                         profile
@@ -1030,9 +1032,9 @@
                                             class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
                                             name</label>
                                         <div class="mt-2">
-                                            <input type="text" name="first-name" disabled value="mehrab"
+                                            <input type="text" name="first-name" disabled value="" data-info="fName"
                                                 autocomplete="given-name"
-                                                class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                class="current-info block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                         </div>
                                     </div>
                                     <!-- ----Lname -->
@@ -1041,9 +1043,9 @@
                                             class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
                                             name</label>
                                         <div class="mt-2">
-                                            <input type="text" name="first-name" disabled value="pourzakaria"
+                                            <input type="text" name="first-name" disabled value="" data-info="lName"
                                                 autocomplete="given-name"
-                                                class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                class="current-info block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                         </div>
                                     </div>
                                     <!-- ----username -->
@@ -1051,9 +1053,9 @@
                                         <label for="first-name"
                                             class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">username</label>
                                         <div class="mt-2">
-                                            <input type="text" name="first-name" disabled value="mmehrab"
+                                            <input type="text" name="first-name" disabled value="" data-info="username"
                                                 autocomplete="given-name"
-                                                class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                class="current-info block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                         </div>
                                     </div>
                                     <!-- ----email -->
@@ -1061,19 +1063,20 @@
                                         <label for="first-name"
                                             class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">email</label>
                                         <div class="mt-2">
-                                            <input type="text" name="first-name" disabled value="mmehrab.pk@gmail.com"
+                                            <input type="text" name="first-name" disabled value="" data-info="email"
                                                 autocomplete="given-name"
-                                                class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                class="current-info block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                         </div>
                                     </div>
                                     <!-- ----number -->
                                     <div class="sm:col-span-3 mt-4">
                                         <label for="first-name"
-                                            class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">number</label>
+                                            class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">phone
+                                            number</label>
                                         <div class="mt-2">
-                                            <input type="number" name="first-name" disabled value="09309791544"
+                                            <input type="number" name="first-name" disabled value="" data-info="phone"
                                                 autocomplete="given-name"
-                                                class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                                                class="current-info block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                         </div>
                                     </div>
                                 </div>
@@ -1086,26 +1089,34 @@
                                         class="text-[15px] font-['400'] flex items-center text-(--txt-color) capitalize">
                                         edit your info
                                     </h2>
-                                    <div class="w-full mt-8">
+                                    <div class="w-full mt-8" id="updateForm">
                                         <div class="w-full flex flex-wrap">
                                             <!-- ----Fname -->
                                             <div class="w-full lg:w-1/2 lg:pr-2.5">
-                                                <label
-                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
-                                                    name</label>
+                                                <div class="flex">
+                                                    <label
+                                                        class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">First
+                                                        name</label>
+                                                    <p class="ml-5 text-red-500 font-['400'] capitalize hidden">
+                                                        Incorrect username</p>
+                                                </div>
                                                 <div class="mt-2">
-                                                    <input type="text" name="first-name" value="mehrab"
+                                                    <input type="text" name="first-name" value="" data-role="fname"
                                                         autocomplete="given-name"
                                                         class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                 </div>
                                             </div>
                                             <!-- ----Lname -->
                                             <div class="w-full lg:w-1/2 lg:pl-2.5 mt-5 lg:mt-0">
-                                                <label
-                                                    class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
-                                                    name</label>
+                                                <div class="flex">
+                                                    <label
+                                                        class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">last
+                                                        name</label>
+                                                    <p class="ml-5 text-red-500 font-['400'] capitalize hidden">
+                                                        Incorrect username</p>
+                                                </div>
                                                 <div class="mt-2">
-                                                    <input type="text" name="first-name" value="pourzakaria"
+                                                    <input type="text" name="first-name" value="" data-role="lname"
                                                         autocomplete="given-name"
                                                         class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                 </div>
@@ -1117,7 +1128,7 @@
                                                 <label
                                                     class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">username</label>
                                                 <div class="mt-2">
-                                                    <input type="text" name="first-name" value="mmehrab"
+                                                    <input type="text" name="first-name" value="" data-role="username"
                                                         autocomplete="given-name"
                                                         class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                 </div>
@@ -1127,7 +1138,7 @@
                                                 <label
                                                     class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">email</label>
                                                 <div class="mt-2">
-                                                    <input type="text" name="first-name" value="mmehrab.pk@gmail.com"
+                                                    <input type="text" name="first-name" value="" data-role="email"
                                                         autocomplete="given-name"
                                                         class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                 </div>
@@ -1139,7 +1150,7 @@
                                                 <label
                                                     class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">number</label>
                                                 <div class="mt-2">
-                                                    <input type="tel" name="first-name" value="09309791544"
+                                                    <input type="tel" name="first-name" value="" data-role="number"
                                                         autocomplete="given-name"
                                                         class="block w-full rounded-md bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                 </div>
@@ -1150,8 +1161,8 @@
                                                     class="block text-sm/6 font-['400'] text-(--txt-color) capitalize">password</label>
                                                 <div
                                                     class="mt-2 relative overflow-hidden outline-1 -outline-offset-1 outline-white/10 rounded-md">
-                                                    <input type="password" name="first-name" value="dasdasdasdasd"
-                                                        autocomplete="given-name"
+                                                    <input type="password" name="first-name" value=""
+                                                        data-role="password" autocomplete="given-name"
                                                         class="block w-full bg-(--bg-color-two) px-3 py-1.5 text-base text-(--txt-color2) placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
                                                     <span
                                                         class="show-password flex justify-center items-center rounded-r-md  h-full bg-(--bg-color-two) px-2 absolute top-0 right-0 cursor-pointer border border-white/10 border-l-0">
@@ -1759,7 +1770,8 @@
         </section>
     </main>
 </body>
-<script src="src/js/todoLoading.js"></script>
+<!-- <script src="src/js/todoLoading.js"></script> -->
+<script src="src/js/show&change.js"></script>
 <script src="src/js/setting.js"></script>
 <script src="src/js/navigation.js"></script>
 <script type="module" src="src/js/task.js"></script>

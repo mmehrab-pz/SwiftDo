@@ -369,7 +369,8 @@ async function getUser() {
       removeLoginLoader();
       return;
     }
-
+    sessionStorage.setItem("username", username);
+    
     email = "";
     password = "";
     username = "";
