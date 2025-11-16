@@ -8,11 +8,66 @@
     <link rel="icon" type="image/png" sizes="32x32" href="src/asset/img/Logo3.png" />
     <link rel="stylesheet" href="src/style/todo/output.css">
     <link rel="stylesheet" href="src/style/todo/mode.css">
+    <link rel="stylesheet" href="src/style/contextMenu.css">
 </head>
 
 <body class="w-vh h-dvh flex overflow-hidden select-none">
+    <!-- -------------------------------------contextMenu---------------------------------- -->
+    <section id="contextMenu">
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/mehrab-poorzakaria-1b2492237/" target="_blank">
+                    linkedin
+                    <figure>
+                        <img src="src/asset/img/svg/linkedin2.svg" alt="linkedin">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mmehrab-pz" target="_blank">
+                    github
+                    <figure>
+                        <img src="src/asset/img/svg/github3.svg" alt="github">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=mmehrab.pk@gmail.com&tf=cm" target="_blank">
+                    gmail
+                    <figure>
+                        <img src="src/asset/img/svg/gmail.svg" alt="gmail">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/mehrab.poorzakaria_web/" target="_blank">
+                    instagram
+                    <figure>
+                        <img src="src/asset/img/svg/instagram2.svg" alt="instagram">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/mehrabPourzakaria" target="_blank">
+                    telegram
+                    <figure>
+                        <img src="src/asset/img/svg/telegram2.svg" alt="telegram">
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="https://api.whatsapp.com/message/NFKYZNXCFLFEG1?autoload=1&app_absent=0" target="_blank">
+                    whatsapp
+                    <figure>
+                        <img src="src/asset/img/svg/whatsapp.svg" alt="whatsapp">
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </section>
     <!-- -------------------------------------setting box---------------------------------- -->
-    <section id="settingBox" class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[-280px] duration-200 z-100">
+    <section id="settingBox"
+        class="w-[280px] h-full bg-(--bg-color-one) absolute top-0 right-[-280px] duration-200 z-100">
         <header
             class="w-full px-4 h-[70px] flex items-center justify-between border-b border-b-(--search-border-color)">
             <h2 class="capitalize text-[16px] font-['500'] text-(--search-h1-color)">settings</h2>
@@ -111,28 +166,31 @@
             </div>
             <!-- -------left sidebar bg pattern -->
             <div class="w-full pt-1 pb-[15px] mt-3">
-                <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar background pattern
+                <h3 class="capitalize text-[13px] font-['400'] text-(--search-title-color)">left sidebar background
+                    pattern
                 </h3>
                 <div class="w-full mt-2 flex gap-2.5">
-                    <span data-url="url(../../asset/img/pat1.png)" class="pattern w-10 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
-                        <span
-                            class="w-full h-full bg-[url(../../asset/img/pat1.png)] bg-cover"></span>
+                    <span data-url="url(../../asset/img/pat1.png)"
+                        class="pattern w-10 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                        <span class="w-full h-full bg-[url(../../asset/img/pat1.png)] bg-cover"></span>
                     </span>
-                    <span data-url="url(../../asset/img/pat2.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                    <span data-url="url(../../asset/img/pat2.png)"
+                        class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
                         <span
                             class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat2.png)] bg-cover left-0 z-1"></span>
                     </span>
-                    <span data-url="url(../../asset/img/pat3.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                    <span data-url="url(../../asset/img/pat3.png)"
+                        class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
                         <span
                             class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat3.png)] bg-cover left-0 z-1"></span>
                     </span>
-                    <span data-url="url(../../asset/img/pat4.png)" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
+                    <span data-url="url(../../asset/img/pat4.png)"
+                        class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
                         <span
                             class="w-full h-full absolute top-0 bg-[url(../../asset/img/pat4.png)] bg-cover left-0 z-1"></span>
                     </span>
                     <span data-url="" class="pattern w-11 h-20 flex rounded-sm cursor-pointer bg-[#b9b9b9] relative">
-                        <span
-                            class="w-full h-full absolute top-0 bg-cover left-0 z-1"></span>
+                        <span class="w-full h-full absolute top-0 bg-cover left-0 z-1"></span>
                     </span>
                 </div>
             </div>
@@ -459,7 +517,8 @@
                             </svg>
                             <h3 class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-2">profile</h3>
                         </div>
-                        <div class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <div data-name="list"
+                            class="navbar w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-(--txt-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1646,5 +1705,5 @@
 <script src="src/js/navigation.js"></script>
 <script type="module" src="src/js/task.js"></script>
 <script src="src/js/support.js"></script>
-
+<script src="src/js/contextMenu.js"></script>
 </html>
