@@ -227,3 +227,19 @@ window.addEventListener("DOMContentLoaded", () => {
     setPattern(savedUrl);
   }
 });
+// ---------------------------------------
+const eyeBtn = document.querySelectorAll(".show-password");
+
+eyeBtn.forEach((item) => {
+  item.addEventListener("mousedown", () => {
+    item.firstElementChild.classList.add("hidden");
+    item.lastElementChild.classList.remove("hidden");
+    // item.previousElementSibling.setAttribute("type", "text");
+    item.parentElement.firstElementChild.setAttribute("type", "text");
+  });
+  item.addEventListener("mouseup", () => {
+    item.lastElementChild.classList.add("hidden");
+    item.firstElementChild.classList.remove("hidden");
+    item.parentElement.firstElementChild.setAttribute("type", "password");
+  });
+});
