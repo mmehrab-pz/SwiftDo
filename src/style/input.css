@@ -49,6 +49,20 @@
             transform: rotate(1turn)
         }
     }
+
+    .scrollHide {
+        overflow-y: auto !important;
+        /* یا scroll */
+        scrollbar-width: none !important;
+        /* برای Firefox */
+        -ms-overflow-style: none !important;
+        /* برای IE و Edge قدیمی */
+    }
+
+    .scrollHide::-webkit-scrollbar {
+        display: none !important;
+        /* برای Chrome، Safari و Opera */
+    }
 }
 
 @layer components {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:page1": " npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --content './index.html' --watch",
+    "watch:page1": "npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/output.css --content './index.html' --watch",
     "watch:page2": "npx @tailwindcss/cli -i ./src/style/todo/input.css -o ./src/style/todo/output.css --content './todo.html' --watch"
   },
   "keywords": [],

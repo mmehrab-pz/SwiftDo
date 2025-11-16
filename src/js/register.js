@@ -62,7 +62,7 @@ let username = "";
 let password = "";
 
 signupForm.querySelectorAll("input").forEach((input, i, arr) => {
-  input.addEventListener("change", () => {
+  input.addEventListener("input", () => {
     let role = input.dataset.role;
     switch (role) {
       case "email":
@@ -106,7 +106,7 @@ signupForm.querySelectorAll("input").forEach((input, i, arr) => {
           input.value === "" ||
           input.value == null ||
           input.value.search(
-            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+            /^[A-Za-z]{8,}$/
           ) === -1
         ) {
           input.classList.remove("input-ok");
@@ -174,7 +174,7 @@ async function checkEmail() {
       addRegexError("This email is already registered.", arr[2]);
     });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
       removeRegexError(arr[2]);
     });
@@ -213,7 +213,7 @@ async function checkUsername() {
       addRegexError("This username is already registered.", arr[3]);
     });
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     signupForm.querySelectorAll("input").forEach((input, i, arr) => {
       removeRegexError(arr[3]);
     });
@@ -300,7 +300,7 @@ const loginForm = document.getElementById("login");
 const loginBtn = document.getElementById("loginBtn");
 
 loginForm.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("change", () => {
+  input.addEventListener("input", () => {
     let role = input.dataset.role;
     switch (role) {
       case "username":
