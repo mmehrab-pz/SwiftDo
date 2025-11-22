@@ -14,7 +14,7 @@
 <body class="w-vh h-dvh flex overflow-hidden select-none relative">
     <!-- -------------------------------------loading---------------------------------- -->
     <span id="loader"
-        class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center">
+        class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center hidden">
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
             <defs>
                 <clippath id="pencil-eraser">
@@ -593,7 +593,7 @@
                             </svg>
                             <h3 class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-2">lock screen</h3>
                         </div>
-                        <div
+                        <div id="logoutBtn"
                             class="w-full flex items-center px-6 pb-1.5 pt-3 hover:bg-(--bg-color-two) duration-200 border-t border-t-(--search-border-color)">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-red-500">

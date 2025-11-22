@@ -84,28 +84,32 @@ function setInfo() {
   });
 }
 // -----------------------------update user info-----------------------------
-const updateForm = document.querySelectorAll("#updateForm input");
-updateForm.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    const role = input.dataset.role;
-    switch (role) {
-      case "fname":
-        if (
-          input.value === "" ||
-          input.value === null ||
-          input.value.search(/^[a-z]{2,20}$/) === -1
-        ) {
-            input.parentElement.previousElementSibling.lastElementChild.classList.remove("hidden");
-            input.classList.add("input-error");
-        }else{
-            firstName = input.value;
-            console.log(firstName);
-            input.parentElement.previousElementSibling.lastElementChild.classList.add("hidden");
-            input.classList.remove("input-error");
-        }
-        break;
-    }
-  });
-});
+// const updateForm = document.querySelectorAll("#updateForm input");
+// updateForm.forEach((input) => {
+//   input.addEventListener("input", (e) => {
+//     const role = input.dataset.role;
+//     switch (role) {
+//       case "fname":
+//         if (
+//           input.value === "" ||
+//           input.value === null ||
+//           input.value.search(/^[a-z]{2,20}$/) === -1
+//         ) {
+//             input.parentElement.previousElementSibling.lastElementChild.classList.remove("hidden");
+//             input.classList.add("input-error");
+//         }else{
+//             firstName = input.value;
+//             console.log(firstName);
+//             input.parentElement.previousElementSibling.lastElementChild.classList.add("hidden");
+//             input.classList.remove("input-error");
+//         }
+//         break;
+//     }
+//   });
+// });
 
 // updateForm.forEach
+// ------------------logout------------------;
+document.getElementById("logoutBtn").addEventListener("click", () => {
+   window.location = 'index.html'
+});
