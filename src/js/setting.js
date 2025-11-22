@@ -194,12 +194,12 @@ function setPattern(newUrl) {
   }
 
   // حذف outline از همه patternها
-  pattern.forEach(item =>
+  pattern.forEach((item) =>
     item.classList.remove("outline-2", "outline-[#556ee6]")
   );
 
   // افزودن outline به pattern فعال
-  const activeItem = [...pattern].find(item => item.dataset.url === newUrl);
+  const activeItem = [...pattern].find((item) => item.dataset.url === newUrl);
   if (activeItem) {
     activeItem.classList.add("outline-2", "outline-[#556ee6]");
   }
@@ -213,7 +213,7 @@ function setPattern(newUrl) {
 }
 
 // رویداد کلیک برای انتخاب pattern
-pattern.forEach(item => {
+pattern.forEach((item) => {
   item.addEventListener("click", () => {
     const newUrl = item.dataset.url;
     setPattern(newUrl);
@@ -243,3 +243,17 @@ eyeBtn.forEach((item) => {
     item.parentElement.firstElementChild.setAttribute("type", "password");
   });
 });
+// -------------------alert--------------------
+const alert = document.getElementById("alert");
+
+function showAlert() {
+  alert.classList.remove("-top-[70px]");
+  alert.classList.add("top-0");
+  setTimeout(() => {
+    alert.classList.remove("top-0");
+    alert.classList.add("-top-[70px]");
+    setTimeout(() => {
+      
+    }, 300);
+  }, 2000);
+}

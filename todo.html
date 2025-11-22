@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftDo | App</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="src/asset/img/Logo3.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/asset/img/Logo3.png" />
     <link rel="stylesheet" href="src/style/todo/output.css">
     <link rel="stylesheet" href="src/style/todo/mode.css">
     <link rel="stylesheet" href="src/style/contextMenu.css">
@@ -14,7 +14,7 @@
 <body class="w-vh h-dvh flex overflow-hidden select-none relative">
     <!-- -------------------------------------loading---------------------------------- -->
     <span id="loader"
-        class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center hidden">
+        class="w-full h-full absolute z-100 bg-white top-0 left-0 flex justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
             <defs>
                 <clippath id="pencil-eraser">
@@ -51,6 +51,14 @@
                 </g>
             </g>
         </svg>
+    </span>
+    <!-- ---------------------------------alert--------------------------------- -->
+    <span id="alert"
+        class="flex w-full md:w-auto h-[50px] bg-[#1d72f193] backdrop-blur-2xl absolute px-3 z-100 -top-[70px] left-[50%] translate-x-[-50%] rounded-b-2xl items-center duration-300">
+        <img src="src/asset/img/icon/info.png" alt="" class="w-[30px]" />
+        <p class="text-[14px] text-[white] font-['400'] capitalize ml-2.5">
+            this feature will be available in the future.
+        </p>
     </span>
     <!-- -------------------------------------contextMenu---------------------------------- -->
     <section id="contextMenu">
@@ -239,7 +247,8 @@
     <!-- -------------------------------------Curtain---------------------------------- -->
     <span id="curtain" class="w-full h-full absolute z-90 top-0 left-0 bg-[#343a408c] hidden"></span>
     <!-- -------------------------------------aside---------------------------------- -->
-    <aside id="aside" data-status="off" class="hidden md:inline h-full md:w-[200px] xl:w-[250px] bg-(image:--bg-aside) bg-(--bg-aside) nav-bg1 relative">
+    <aside id="aside" data-status="off"
+        class="hidden md:inline h-full md:w-[200px] xl:w-[250px] bg-(image:--bg-aside) bg-(--bg-aside) nav-bg1 relative">
         <span id="asidePat" class="w-full h-full absolute top-0 left-0 z-1 opacity-10"></span>
         <header class="w-full h-[70px] relative z-5">
             <figure class="w-full h-full flex justify-center items-center">
@@ -366,8 +375,8 @@
                 </div>
                 <!-- ----search--- -->
                 <div class="hidden h-full md:flex items-center">
-                    <form class="w-[220px] h-[38px] rounded-full bg-(--header-search-bg) flex">
-                        <button class="h-full flex items-center pl-2.5 cursor-pointer">
+                    <form onclick="showAlert()" class="w-[220px] h-[38px] rounded-full bg-(--header-search-bg) flex">
+                        <button disabled class="h-full flex items-center pl-2.5 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" class="size-4 text-(--secondary-text-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -386,27 +395,27 @@
                         <img src="src/asset/img/icon/usa.png" alt="" class="w-6">
                     </figure>
                     <div class="w-40 absolute right-0 top-[105%] shadoow2 rounded-sm bg-(--bg-color-one) py-2 hidden">
-                        <figure class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <figure onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <img src="src/asset/img/icon/spain.png" alt="" class="w-[18px]">
                             <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">spanish
                             </figcaption>
                         </figure>
-                        <figure class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <figure onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <img src="src/asset/img/icon/germany.png" alt="" class="w-[18px]">
                             <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">german
                             </figcaption>
                         </figure>
-                        <figure class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <figure onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <img src="src/asset/img/icon/italy.png" alt="" class="w-[18px]">
                             <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">italian
                             </figcaption>
                         </figure>
-                        <figure class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <figure onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <img src="src/asset/img/icon/japan.png" alt="" class="w-[18px]">
                             <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">japanese
                             </figcaption>
                         </figure>
-                        <figure class="w-full flex items-center px-6 py-1.5 bg-(--bg-color-two)">
+                        <figure onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 bg-(--bg-color-two)">
                             <img src="src/asset/img/icon/usa.png" alt="" class="w-[18px]">
                             <figcaption class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-1">english
                             </figcaption>
@@ -535,7 +544,7 @@
                 <!-- ----username--- -->
                 <div class="h-full px-3 flex cursor-pointer ml-1 toka relative">
                     <figure class="flex items-center">
-                        <img src="src/asset/img/mehrab.jpg" alt="" class="w-9 h-9 rounded-full">
+                        <img src="src/asset/img/profile.png" alt="" class="w-9 h-9 rounded-full">
                         <figcaption id="headerUsername"
                             class="text-[13px] font-['400'] text-(--header-text-color) ml-2 flex items-center">
 
@@ -566,7 +575,7 @@
                             </svg>
                             <h3 class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-2">my task</h3>
                         </div>
-                        <div class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
+                        <div onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 hover:bg-(--bg-color-two) duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-(--txt-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -576,7 +585,7 @@
                             </svg>
                             <h3 class="capitalize text-[13px] text-(--txt-color) font-['400'] ml-2">settings</h3>
                         </div>
-                        <div class="w-full flex items-center px-6 py-1.5 pb-3 hover:bg-(--bg-color-two) duration-200">
+                        <div onclick="showAlert()" class="w-full flex items-center px-6 py-1.5 pb-3 hover:bg-(--bg-color-two) duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5 text-(--txt-color)">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -1020,7 +1029,7 @@
                                 <!-- ------img -->
                                 <div class="w-full flex justify-center lg:justify-start">
                                     <figure class="w-[100px] h-[100px] rounded-full overflow-hidden">
-                                        <img src="src/asset/img/mehrab.jpg" alt="">
+                                        <img src="src/asset/img/profile.png" alt="">
                                     </figure>
                                 </div>
                                 <!-- ------info -->
@@ -1185,7 +1194,7 @@
                                             </div>
                                         </div>
                                         <div class="w-full mt-5">
-                                            <button
+                                            <button onclick="showAlert()"
                                                 class="rounded-sm px-2.5 py-1.5 capitalize font-['400'] text-(--txt-color) text-[15px] bg-[#556ee6] cursor-pointer">change
                                                 data</button>
                                         </div>
@@ -1741,7 +1750,7 @@
                                         </div>
                                         <!-- ----send -->
                                         <div class="w-full mt-5">
-                                            <button
+                                            <button onclick="showAlert()"
                                                 class="rounded-sm px-2.5 py-1.5 capitalize font-['400'] text-(--txt-color) text-[15px] bg-[#556ee6] cursor-pointer flex items-center">
                                                 send
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -1776,5 +1785,6 @@
 <script type="module" src="src/js/task.js"></script>
 <script src="src/js/support.js"></script>
 <script src="src/js/contextMenu.js"></script>
+<script src="src/js/alert.js"></script>
 
 </html>
