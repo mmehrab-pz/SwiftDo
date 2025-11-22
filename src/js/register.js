@@ -106,7 +106,7 @@ signupForm.querySelectorAll("input").forEach((input, i, arr) => {
           input.value === "" ||
           input.value == null ||
           input.value.search(
-            /^[A-Za-z]{8,}$/
+           /^[\x00-\x7F]+$/
           ) === -1
         ) {
           input.classList.remove("input-ok");
